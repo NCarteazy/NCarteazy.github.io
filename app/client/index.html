@@ -1,0 +1,27 @@
+<html ng-app="nmsnamer">
+<head>
+	<title> NMS Planet Namer </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS/JS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="ctrl.js"></script>
+	<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+
+
+<body>
+	<div ng-controller="nameController">
+		<div id="namebox">
+			<h1><span>{{ name }}</span></h1>
+		</div>
+
+		<div id="choices">
+			<label ng-repeat="biome in biomes">
+				<input type='radio' ng-model="biome.p1" ng-value="biomes[0].abv"> {{ biome.name }}
+			</label>
+		</div>
+	</div>
+</body>
