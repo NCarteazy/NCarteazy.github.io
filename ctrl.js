@@ -5,8 +5,6 @@ angular.module('namer', [])
 	
 	$scope.name = {
 			"p2":"hog",
-			"p2keys":"",
-			"p2names":""
 			};
 
 	$scope.biomes = [
@@ -157,30 +155,33 @@ angular.module('namer', [])
 
 
 	$scope.resourceChange = function(){
-		$scope.name.p2keys = ""
-		$scope.name.p2names = ""
+		$scope.name.p2.keys = ""
+		$scope.name.p2.names = ""
 		for (var resource in $scope.resources) {
 			if($scope.resources[resource].boo) {
-				if(!$scope.name.p2keys) {
-					$scope.name.p2keys = $scope.resources[resource].key
-					$scope.name.p2names = $scope.resources[resource].name
+				if(!$scope.name.p2.keys) {
+					$scope.name.p2.keys = $scope.resources[resource].key
+					$scope.name.p2.names = $scope.resources[resource].name
 				}
 				else {
-					$scope.name.p2keys = $scope.name.p2keys + $scope.resources[resource].key
-					$scope.name.p2names = $scope.name.p2names + "/" + $scope.resources[resource].name
+					$scope.name.p2.keys = $scope.name.p2.keys + $scope.resources[resource].key
+					$scope.name.p2.names = $scope.name.p2.names + "/" + $scope.resources[resource].name
 				}
 			};
 		};
 		for (var resourceCombination in $scope.resourceCombinations) {
-			if($scope.resourceCombinations[resourceCombination].keys === $scope.p2keys) {
+			if($scope.resourceCombinations[resourceCombination].keys === $scope.p2.keys) {
 				$scope.name.p2.abv = $scope.resourceCombinations[resourceCombination].abv
+				break;
 			}
 			else if ($scope.resourceCombinations[resourceCombination].keys.length >= 3) {
 				if($scope.resourceCombinations[resourceCombination].keys.indexOf('d') != -1) {
 					$scope.name.p2.abv = 'nth'
+					break;
 				}
 				else {
 					$scope.name.p2.abv = 'bth'
+					break;
 				};
 			};
 		};
