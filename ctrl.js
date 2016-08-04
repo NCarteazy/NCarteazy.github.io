@@ -157,6 +157,8 @@ angular.module('namer', [])
 
 
 	$scope.resourceChange = function(){
+		$scope.name.p2keys = ""
+		$scope.name.p2names = ""
 		for (var resource in $scope.resources) {
 			if($scope.resources[resource].boo) {
 				if(!$scope.name.p2keys) {
