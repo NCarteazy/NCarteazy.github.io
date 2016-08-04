@@ -1,7 +1,7 @@
 angular.module('namer', [])
 
 // inject the Todo service factory into our controller
-.controller('nameController', ['$scope', function($scope) {
+.controller('nameController', ['$scope', 'filterFilter', function($scope, filterFilter) {
 	
 	$scope.name = {
 			"pre":"dog"
@@ -58,29 +58,38 @@ angular.module('namer', [])
 		{
 			"name" : "Ship",
 			"key" : "a",
-			"boo" : "f"
+			"boo" : 'false'
 		},
 		{
 			"name" : "Suit",
 			"key" : "b",
-			"boo" : "f"
+			"boo" : 'false'
 		},
 		{
 			"name" : "Multi-tool",
 			"key" : "c",
-			"boo" : "f"
+			"boo" : 'false'
 		},
 		{
 			"name" : "Blueprint",
 			"key" : "d",
-			"boo" : "f"
+			"boo" : 'false'
 		},
 		{
 			"name" : "Trading",
 			"key" : "e",
-			"boo" : "f"
+			"boo" : 'false'
 		}
 	];
 
+	$scope.selectedResources = function selectedResources() {
+		return filterFilter($scope.resources, {boo:true});
+	};
+
+	$scope.$watch('resource.boo|filter:{boo:true}', function (nv) {
+		$scope.p2 = nv.map(function (resource) {
+			return resource.key;
+		});
+	}, true);
 
 }]);

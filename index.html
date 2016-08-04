@@ -18,7 +18,8 @@
 		</div>
 
 		<div id="Choices">
-			<h1><span>Biome: {{ name.p1.name }}</span></h1>
+			<h2><span>Biome: {{ name.p1.name }}</span></h2>
+			<h2><span>Resources: {{ name.p2 }}</span></h2>
 		</div>
 
 		<div id="choices">
@@ -29,11 +30,10 @@
 				name="prefix">
 				<span>{{ biome.name }}</span>
 			</label>
+			<br>
 			<label ng-repeat="resource in resources">
 				<input type='checkbox' 
-				ng-model="resource.boo"
-				ng-true-value="resource.key"> 
-
+				ng-model="resource.boo"> 
 				<span>{{ resource.name }}</span>
 			</label>
 		</div>
