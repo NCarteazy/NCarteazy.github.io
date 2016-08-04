@@ -83,12 +83,12 @@ angular.module('namer', [])
 		}
 	];
 
+
+
 	$scope.resourceChange = function(){
 		$scope.p2string = "dog"
 		for (var resource in $scope.resources) {
-			if(resource.boo) {
-				$scope.p2string = $scope.p2string + resource.key
-			};
+			$scope.p2string = $scope.p2string + "dog"
 		};
 
 	}
