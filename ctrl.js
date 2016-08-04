@@ -5,7 +5,7 @@ angular.module('namer', [])
 	
 	$scope.name = {
 			"p1":"dog"
-			"p2string":
+			"p2string":""
 			};
 
 	$scope.biomes = [
@@ -90,6 +90,6 @@ angular.module('namer', [])
 				$scope.p2string.concat(resource.key);
 			};
 		};
-		
+
 	}
 }]);
