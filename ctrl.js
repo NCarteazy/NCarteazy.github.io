@@ -59,34 +59,34 @@ angular.module('namer', [])
 		{
 			"name" : "Ship",
 			"key" : "a",
-			"boo" : 'false'
+			"boo" : false
 		},
 		{
 			"name" : "Suit",
 			"key" : "b",
-			"boo" : 'false'
+			"boo" : false
 		},
 		{
 			"name" : "Multi-tool",
 			"key" : "c",
-			"boo" : 'false'
+			"boo" : false
 		},
 		{
 			"name" : "Blueprint",
 			"key" : "d",
-			"boo" : 'false'
+			"boo" : false
 		},
 		{
 			"name" : "Trading",
 			"key" : "e",
-			"boo" : 'false'
+			"boo" : false
 		}
 	];
 
 	$scope.resourceChange = function(){
 		$scope.p2string = "dog"
 		for (var resource in $scope.resources) {
-			if(resource.boo === 'true') {
+			if(resource.boo) {
 				$scope.p2string = $scope.p2string + resource.key
 			};
 		};
