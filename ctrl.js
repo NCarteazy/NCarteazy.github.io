@@ -170,7 +170,7 @@ angular.module('namer', [])
 			};
 		};
 		for (var resourceCombination in $scope.resourceCombinations) {
-			if($scope.resourceCombinations[resourceCombination].keys === $scope.p2.keys) {
+			if($scope.resourceCombinations[resourceCombination].keys === $scope.name.p2.keys) {
 				$scope.name.p2.abv = $scope.resourceCombinations[resourceCombination].abv
 				break;
 			}
