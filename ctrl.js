@@ -171,7 +171,7 @@ angular.module('namer', [])
 			else if ($scope.resourceCombinations[resourceCombination].keys.length >= 3) {
 				if($scope.resourceCombinations[resourceCombination].keys.indexOf('d') != -1) {
 					$scope.p2 = 'nth'
-				};
+				}
 				else {
 					$scope.p2 = 'bth'
 				};
