@@ -88,7 +88,7 @@ angular.module('namer', [])
 	$scope.resourceChange = function(){
 		$scope.p2string = "dog"
 		for (var resource in $scope.resources) {
-			$scope.p2string = $scope.p2string + "dog"
+			$scope.p2string = $scope.p2string + resource.key
 		};
 
 	}
