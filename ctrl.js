@@ -1,4 +1,3 @@
-use strict;
 angular.module('namer', [])
 
 // inject the Todo service factory into our controller
