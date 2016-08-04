@@ -159,8 +159,14 @@ angular.module('namer', [])
 	$scope.resourceChange = function(){
 		for (var resource in $scope.resources) {
 			if($scope.resources[resource].boo) {
-				$scope.name.p2keys = $scope.p2keys + $scope.resources[resource].key
-				$scope.name.p2names = $scope.p2names + "/" + $scope.resources[resource].name
+				if($scope.name.p2keys) {
+					$scope.name.p2keys = $scope.resources[resource].key
+					$scope.name.p2names = $scope.resources[resource].name
+				}
+				else {
+					$scope.name.p2keys = $scope.p2keys + $scope.resources[resource].key
+					$scope.name.p2names = $scope.p2names + "/" + $scope.resources[resource].name
+				}
 			};
 		};
 		for (var resourceCombination in $scope.resourceCombinations) {
