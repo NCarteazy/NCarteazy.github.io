@@ -88,7 +88,6 @@ angular.module('namer', [])
 
 	$scope.$watch('resource.boo|filter:{boo:true}', function () {
 		$scope.p2 = resource.key;
-		});
 	}, true);
 
 }]);
