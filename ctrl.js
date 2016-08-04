@@ -5,7 +5,8 @@ angular.module('namer', [])
 	
 	$scope.name = {
 			"p1":"dog",
-			"p2keys":""
+			"p2keys":"",
+			"p2names":""
 			};
 
 	$scope.biomes = [
@@ -160,20 +161,20 @@ angular.module('namer', [])
 		$scope.p2names = ""
 		for (var resource in $scope.resources) {
 			if($scope.resources[resource].boo) {
-				$scope.p2keys = $scope.p2keys + $scope.resources[resource].key
-				$scope.p2names = $scope.p2names + "/" + $scope.resources[resource].name
+				$scope.name.p2keys = $scope.p2keys + $scope.resources[resource].key
+				$scope.name.p2names = $scope.p2names + "/" + $scope.resources[resource].name
 			};
 		};
 		for (var resourceCombination in $scope.resourceCombinations) {
 			if($scope.resourceCombinations[resourceCombination].keys === $scope.p2keys) {
-				$scope.p2 = $scope.resourceCombinations[resourceCombination].abv
+				$scope.name.p2 = $scope.resourceCombinations[resourceCombination].abv
 			}
 			else if ($scope.resourceCombinations[resourceCombination].keys.length >= 3) {
 				if($scope.resourceCombinations[resourceCombination].keys.indexOf('d') != -1) {
-					$scope.p2 = 'nth'
+					$scope.name.p2 = 'nth'
 				}
 				else {
-					$scope.p2 = 'bth'
+					$scope.name.p2 = 'bth'
 				};
 			};
 		};

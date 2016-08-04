@@ -15,11 +15,12 @@
 	<div ng-controller="nameController">
 		<div id="namebox">
 			<h1><span>{{ name.p1.abv }}</span></h1>
+			<h1><span>{{ name.p2.abv }}</span></h1>
 		</div>
 
 		<div id="Choices">
 			<h2><span>Biome: {{ name.p1.name }}</span></h2>
-			<h2><span>Resources: {{ name.p2 }}</span></h2>
+			<h2><span>Resources: {{ name.p2names }}</span></h2>
 		</div>
 
 		<div id="choices">
@@ -41,7 +42,8 @@
 		</div>
 		<div>
 			<span>{{resources}}</span>
-			<span>{{p2string}}</span>
+			<span>{{name.p2keys}}</span>
+
 		</div>
 	</div>
 </body>
