@@ -3,8 +3,9 @@ angular.module('namer', [])
 // inject the Todo service factory into our controller
 .controller('nameController', ['$scope', function($scope) {
 	
-	$scope.pre = "dog";
-	
+	$scope.name = {
+			"pre":"dog"
+			};
 	$scope.biomes = [
 		{
 			"name":"Desert",

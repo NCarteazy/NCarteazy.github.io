@@ -14,12 +14,12 @@
 <body>
 	<div ng-controller="nameController">
 		<div id="namebox">
-			<h1><span>{{ pre }}</span></h1>
+			<h1><span>{{ name.pre }}</span></h1>
 		</div>
 
 		<div id="choices">
 			<label ng-repeat="biome in biomes">
-				<input type='radio' ng-model="pre" ng-value="biome.abv" name="prefix"> {{ biome.name }}
+				<input type='radio' ng-model="name.pre" ng-value="biome.abv" name="prefix"> {{ biome.name }}
 			</label>
 		</div>
 	</div>
