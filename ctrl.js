@@ -4,7 +4,7 @@ angular.module('namer', [])
 .controller('nameController', ['$scope', 'filterFilter', function($scope, filterFilter) {
 	
 	$scope.name = {
-			"p1":"dog"
+			"p1":"dog",
 			"p2string":""
 			};
 
