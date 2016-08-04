@@ -87,7 +87,7 @@ angular.module('namer', [])
 		$scope.p2string = "dog"
 		for (var resource in $scope.resources) {
 			if(resource.boo === 'true') {
-				$scope.p2string.concat(resource.key);
+				$scope.p2string = $scope.p2string + resource.key
 			};
 		};
 
