@@ -14,12 +14,27 @@
 <body>
 	<div ng-controller="nameController">
 		<div id="namebox">
-			<h1><span>{{ name.pre }}</span></h1>
+			<h1><span>{{ name.p1.abv }}</span></h1>
+		</div>
+
+		<div id="Choices">
+			<h1><span>Biome: {{ name.p1.name }}</span></h1>
 		</div>
 
 		<div id="choices">
 			<label ng-repeat="biome in biomes">
-				<input type='radio' ng-model="name.pre" ng-value="biome.abv" name="prefix"> <span>{{ biome.name }}</span>
+				<input type='radio' 
+				ng-model="name.p1" 
+				ng-value="biome" 
+				name="prefix">
+				<span>{{ biome.name }}</span>
+			</label>
+			<label ng-repeat="resource in resources">
+				<input type='checkbox' 
+				ng-model="resource.boo"
+				ng-true-value="resource.key"> 
+
+				<span>{{ resource.name }}</span>
 			</label>
 		</div>
 	</div>

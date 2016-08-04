@@ -1,3 +1,4 @@
+use strict;
 angular.module('namer', [])
 
 // inject the Todo service factory into our controller
@@ -6,6 +7,7 @@ angular.module('namer', [])
 	$scope.name = {
 			"pre":"dog"
 			};
+
 	$scope.biomes = [
 		{
 			"name":"Desert",
@@ -52,4 +54,34 @@ angular.module('namer', [])
 			"abv":"We"
 		}
 		];
+
+	$scope.resources = [
+		{
+			"name" : "Ship",
+			"key" : "a",
+			"boo" : "f"
+		},
+		{
+			"name" : "Suit",
+			"key" : "b",
+			"boo" : "f"
+		},
+		{
+			"name" : "Multi-tool",
+			"key" : "c",
+			"boo" : "f"
+		},
+		{
+			"name" : "Blueprint",
+			"key" : "d",
+			"boo" : "f"
+		},
+		{
+			"name" : "Trading",
+			"key" : "e",
+			"boo" : "f"
+		}
+	];
+
+
 }]);
