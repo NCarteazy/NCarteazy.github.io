@@ -164,8 +164,8 @@ angular.module('namer', [])
 					$scope.name.p2names = $scope.resources[resource].name
 				}
 				else {
-					$scope.name.p2keys = $scope.p2keys + $scope.resources[resource].key
-					$scope.name.p2names = $scope.p2names + "/" + $scope.resources[resource].name
+					$scope.name.p2keys = $scope.name.p2keys + $scope.resources[resource].key
+					$scope.name.p2names = $scope.name.p2names + "/" + $scope.resources[resource].name
 				}
 			};
 		};
