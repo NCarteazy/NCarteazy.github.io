@@ -4,9 +4,9 @@ angular.module('namer', [])
 .controller('nameController', ['$scope', 'filterFilter', function($scope, filterFilter) {
 	
 	$scope.name = {
-			"p2":"hog",
 			"p2keys":"",
-			"p2names":""
+			"p2names":"",
+			"p2abv":"hog"
 			};
 
 	$scope.biomes = [
@@ -173,14 +173,14 @@ angular.module('namer', [])
 		};
 		for (var resourceCombination in $scope.resourceCombinations) {
 			if($scope.resourceCombinations[resourceCombination].keys === $scope.p2keys) {
-				$scope.name.p2.abv = $scope.resourceCombinations[resourceCombination].abv
+				$scope.name.p2abv = $scope.resourceCombinations[resourceCombination].abv
 			}
 			else if ($scope.resourceCombinations[resourceCombination].keys.length >= 3) {
 				if($scope.resourceCombinations[resourceCombination].keys.indexOf('d') != -1) {
-					$scope.name.p2.abv = 'nth'
+					$scope.name.p2abv = 'nth'
 				}
 				else {
-					$scope.name.p2.abv = 'bth'
+					$scope.name.p2abv = 'bth'
 				};
 			};
 		};
