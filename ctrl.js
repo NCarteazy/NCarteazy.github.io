@@ -4,7 +4,7 @@ angular.module('namer', [])
 .controller('nameController', ['$scope', 'filterFilter', function($scope, filterFilter) {
 	
 	$scope.name = {
-			"p1":"dog",
+			"p2":"hog"
 			"p2keys":"",
 			"p2names":""
 			};
@@ -157,8 +157,6 @@ angular.module('namer', [])
 
 
 	$scope.resourceChange = function(){
-		$scope.p2keys = ""
-		$scope.p2names = ""
 		for (var resource in $scope.resources) {
 			if($scope.resources[resource].boo) {
 				$scope.name.p2keys = $scope.p2keys + $scope.resources[resource].key
@@ -167,14 +165,14 @@ angular.module('namer', [])
 		};
 		for (var resourceCombination in $scope.resourceCombinations) {
 			if($scope.resourceCombinations[resourceCombination].keys === $scope.p2keys) {
-				$scope.name.p2 = $scope.resourceCombinations[resourceCombination].abv
+				$scope.name.p2.abv = $scope.resourceCombinations[resourceCombination].abv
 			}
 			else if ($scope.resourceCombinations[resourceCombination].keys.length >= 3) {
 				if($scope.resourceCombinations[resourceCombination].keys.indexOf('d') != -1) {
-					$scope.name.p2 = 'nth'
+					$scope.name.p2.abv = 'nth'
 				}
 				else {
-					$scope.name.p2 = 'bth'
+					$scope.name.p2.abv = 'bth'
 				};
 			};
 		};
