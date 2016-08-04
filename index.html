@@ -34,12 +34,14 @@
 			<label ng-repeat="resource in resources">
 				<input type='checkbox' 
 				name="selectedResources[]"
-				ng-model="resource.boo"> 
+				ng-model="resource.boo"
+				ng-change="resourceChange()"> 
 				<span>{{ resource.name }}</span>
 			</label>
 		</div>
 		<div>
 			<span>{{resources}}</span>
+			<span>{{p2string}}</span>
 		</div>
 	</div>
 </body>

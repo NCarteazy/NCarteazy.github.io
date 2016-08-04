@@ -4,7 +4,8 @@ angular.module('namer', [])
 .controller('nameController', ['$scope', 'filterFilter', function($scope, filterFilter) {
 	
 	$scope.name = {
-			"pre":"dog"
+			"p1":"dog"
+			"p2string":
 			};
 
 	$scope.biomes = [
@@ -82,14 +83,13 @@ angular.module('namer', [])
 		}
 	];
 
-	$scope.selectedResources = function selectedResources() {
-		return filterFilter($scope.resources, {boo:true});
-	};
-
-	$scope.$watch('resources|filter:{boo:true}', function (nv) {
-		$scope.p2 = nv.map(function (resource) {
-			return resource.key;
-		});
-	}, true);
-
+	$scope.resourceChange = function(){
+		$scope.p2string = ""
+		for (resource in $scope.resources) {
+			if(resource.boo === 'true') {
+				$scope.p2string.concat(resource.key);
+			};
+		};
+		
+	}
 }]);
