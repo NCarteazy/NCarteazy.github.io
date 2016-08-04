@@ -1,7 +1,6 @@
 /*global angular*/
-angular.module('app', ['ngRoute']);
+"use strict"; 
 angular.module('namer', [])
-
 
 // inject the Todo service factory into our controller
 .controller('nameController', ['$scope', function($scope) {
