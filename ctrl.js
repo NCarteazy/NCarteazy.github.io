@@ -86,8 +86,10 @@ angular.module('namer', [])
 		return filterFilter($scope.resources, {boo:true});
 	};
 
-	$scope.$watch('resources|filter:{boo:true}', function () {
-		$scope.p2 = $scope.resource.key;
+	$scope.$watch('resources|filter:{boo:true}', function (nv) {
+		$scope.p2 = nv.map(function (resource) {
+			return resource.key;
+		});
 	}, true);
 
 }]);
