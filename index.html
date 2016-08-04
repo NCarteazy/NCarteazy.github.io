@@ -1,4 +1,15 @@
 <html>
+<head>
+	<title> NMS Planet Namer </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS/JS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
 
 <script>
 angular.module('namer', [])
@@ -57,17 +68,6 @@ angular.module('namer', [])
 }]);
 </script>
 
-<head>
-	<title> NMS Planet Namer </title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- CSS/JS -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-	<link href="style.css" type="text/css" rel="stylesheet">
-</head>
-
-<body>
 	<div ng-controller="nameController">
 		<div id="namebox">
 			<h1><span>{{ name }}</span></h1>
