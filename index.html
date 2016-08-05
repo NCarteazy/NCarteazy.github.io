@@ -14,35 +14,54 @@
 <body>
   <div ng-controller="nameController">
     <div id="namebox">
-      <h1><span>{{ name.p1.abv }}</span></h1>
-      <h1><span>{{ name.p2.abv }}</span></h1>
-      <h1><span>{{ name.p3.abv }}</span></h1>
+      <h1><span>{{ name.p1.abv }}{{ name.p2.abv }}{{ name.p3.abv }}{{ name.p4.abv }}</span></h1>
     </div>
 
     <div id="Choices">
       <h2><span>Biome: {{ name.p1.name }}</span></h2>
       <h2><span>Resources: {{ name.p2.name }}</span></h2>
       <h2><span>Lifeforms: {{ name.p3.name }}</span></h2>
+      <h2><span>Law: {{ name.p4.name }}</span></h2>
     </div>
 
     <div id="choices">
+
       <label ng-repeat="biome in biomes">
         <input type='radio' ng-model="name.p1" ng-value="biome" name="prefix">
         <span>{{ biome.name }}</span>
       </label>
       <br>
+      <br>
+
       <label ng-repeat="resource in resources">
         <input type='checkbox' ng-model="resource.boo" ng-change="resourceChange()">
         <span>{{ resource.name }}</span>
       </label>
       <br>
+      <br>
+
       <label ng-repeat="lifeform in lifeforms">
         <input type='checkbox' ng-model="lifeform.boo" ng-change="lifeformChange()">
         <span>{{ lifeform.name }}</span>
       </label>
+      <br>
+      <br>
+
+      <input type='checkbox' ng-model="p4choice" ng-change="lawChange()">
+      <span>{{ law.sent.name }}</span>
+      <br>
+      <br>
+
+      <label ng-repeat="structure in structures">
+        <input type='checkbox' ng-model="structure.boo" ng-change="structureChange()">
+        <span>{{ structure.name }}</span>
+      </label>
+      <br>
+      <br>
+
     </div>
     <div>
-      <span>{{name.p2.keys.length}}</span>
+      <span>{{name.p5}}</span>
     </div>
   </div>
 </body>

@@ -5,18 +5,28 @@ angular.module('namer', [])
 
   $scope.name = {
     "p1": {
-      "name": "",
-      "abv": ""
+      "name": "Desert",
+      "abv": "De"
     },
     "p2": {
       "keys": "",
-      "name": "",
-      "abv": ""
+      "name": "None",
+      "abv": "zil"
     },
     "p3": {
       "key": "",
-      "name": "",
-      "abv": ""
+      "name": "None",
+      "abv": "u"
+    },
+    "p4": {
+      "name": "Lawless",
+      "abv": "l"
+    },
+    "p5": {
+      "keys": "",
+      "name": "None",
+      "abv": "no"
+    }
   };
 
   $scope.biomes = [{
@@ -129,39 +139,167 @@ angular.module('namer', [])
     "abv": 'bth',
   }];
 
+  $scope.lifeforms = [{
+    "name": "Plants",
+    "key": "a",
+    "boo": false,
+    "abv": "e"
+  }, {
+    "name": "Creatures",
+    "key": "b",
+    "boo": false,
+    "abv": "i"
+  }, {
+    "name": "NPCs",
+    "key": "c",
+    "boo": false,
+    "abv": "o"
+  }];
 
-  $scope.resourceChange = function() {
-    $scope.name.p2.keys = ""
-    $scope.name.p2.name = ""
-    for (var resource in $scope.resources) {
-      if ($scope.resources[resource].boo) {
-        if (!$scope.name.p2.keys) {
-          $scope.name.p2.keys = $scope.resources[resource].key
-          $scope.name.p2.name = $scope.resources[resource].name
-        } else {
-          $scope.name.p2.keys = $scope.name.p2.keys + $scope.resources[resource].key
-          $scope.name.p2.name = $scope.name.p2.name + "/" + $scope.resources[resource].name
-        }
-      };
-    };
-    for (var resourceCombination in $scope.resourceCombinations) {
-      $scope.name.p2.abv = ""
-      if ($scope.resourceCombinations[resourceCombination].keys === $scope.name.p2.keys) {
-        $scope.name.p2.abv = $scope.resourceCombinations[resourceCombination].abv
-        break;
-      } else if ($scope.name.p2.keys.length >= 3) {
-        if ($scope.name.p2.keys.indexOf('d') == -1) {
-          $scope.name.p2.abv = 'nth'
-          break;
-        } else {
-          $scope.name.p2.abv = 'bth'
-          break;
-        };
-      }
-      else if ($scope.name.p2.keys == 0) {
-      	$scope.name.p2.abv = 'zil'
-        break;
-      };
-    };
+  $scope.sent = {
+    "name": "Sentinels",
+    "abv": "s"
   }
+  $scope.lawless = {
+    "name": "Lawless",
+    "abv": "l"
+  }
+
+  $scope.structures = [{
+    "name": "Buildings",
+    "key": "a",
+    "boo": false
+  }, {
+    "name": "Monoliths",
+    "key": "b",
+    "boo": false
+  }, {
+    "name": "Portals",
+    "key": "c",
+    "boo": false
+  }];
+
+  $scope.structureCombinations = [{
+      "keys": 'a',
+      "abv": 'bu',
+    }, {
+      "keys": 'b',
+      "abv": 'mo',
+    }, {
+      "keys": 'c',
+      "abv": 'po',
+    }, {
+      "keys": 'ab',
+      "abv": 'ma',
+    }, {
+      "keys": 'ac',
+      "abv": 'mu',
+    }, {
+      "keys": 'bc',
+      "abv": 'po',
+    }, {
+      "keys": 'abc',
+      "abv": 'sa',
+    }, {
+      "keys": '',
+      "abv": 'no',
+    }
+  }];
+
+
+$scope.lawChange = function() {
+  if ($scope.name.p4.abv === "l") {
+    $scope.name.p4 = $scope.sent
+  } else {
+    $scope.name.p4 = $scope.lawless
+  }
+}
+
+$scope.resourceChange = function() {
+  $scope.name.p2.keys = ""
+  $scope.name.p2.name = ""
+  for (var resource in $scope.resources) {
+    if ($scope.resources[resource].boo) {
+      if (!$scope.name.p2.keys) {
+        $scope.name.p2.keys = $scope.resources[resource].key
+        $scope.name.p2.name = $scope.resources[resource].name
+      } else {
+        $scope.name.p2.keys = $scope.name.p2.keys + $scope.resources[resource].key
+        $scope.name.p2.name = $scope.name.p2.name + "/" + $scope.resources[resource].name
+      }
+    };
+  };
+  for (var resourceCombination in $scope.resourceCombinations) {
+    $scope.name.p2.abv = ""
+    if ($scope.resourceCombinations[resourceCombination].keys === $scope.name.p2.keys) {
+      $scope.name.p2.abv = $scope.resourceCombinations[resourceCombination].abv
+      break;
+    } else if ($scope.name.p2.keys.length >= 3) {
+      if ($scope.name.p2.keys.indexOf('d') == -1) {
+        $scope.name.p2.abv = 'nth'
+        break;
+      } else {
+        $scope.name.p2.abv = 'bth'
+        break;
+      };
+    } else if ($scope.name.p2.keys == 0) {
+      $scope.name.p2.name = "None"
+      $scope.name.p2.abv = 'zil'
+      break;
+    };
+  };
+};
+
+$scope.lifeformChange = function() {
+  $scope.name.p3.key = ""
+  $scope.name.p3.name = ""
+  for (var lifeform in $scope.lifeforms) {
+    if ($scope.lifeforms[lifeform].boo) {
+      if (!$scope.name.p3.key) {
+        $scope.name.p3.key = $scope.lifeforms[lifeform].key
+        $scope.name.p3.name = $scope.lifeforms[lifeform].name
+      } else {
+        $scope.name.p3.key = $scope.name.p3.key + $scope.lifeforms[lifeform].key
+        $scope.name.p3.name = $scope.name.p3.name + "/" + $scope.lifeforms[lifeform].name
+      }
+    };
+  };
+  for (var lifeform in $scope.lifeforms) {
+    $scope.name.p3.abv = ""
+    if ($scope.lifeforms[lifeform].key === $scope.name.p3.key) {
+      $scope.name.p3.abv = $scope.lifeforms[lifeform].abv
+      break;
+    } else if ($scope.name.p3.key.length >= 2) {
+      $scope.name.p3.abv = 'a'
+      break;
+    } else if ($scope.name.p3.key == 0) {
+      $scope.name.p3.name = "None"
+      $scope.name.p3.abv = 'u'
+      break;
+    };
+  };
+};
+
+$scope.structureChange = function() {
+  $scope.name.p5.keys = ""
+  $scope.name.p5.name = ""
+  for (var structure in $scope.structures) {
+    if ($scope.structures[structure].boo) {
+      if (!$scope.name.p5.keys) {
+        $scope.name.p5.keys = $scope.structures[structure].key
+        $scope.name.p5.name = $scope.structures[structure].name
+      } else {
+        $scope.name.p5.keys = $scope.name.p5.keys + $scope.structures[structure].key
+        $scope.name.p5.name = $scope.name.p5.name + "/" + $scope.structures[structure].name
+      }
+    };
+  };
+  for (var structureCombination in $scope.structureCombinations) {
+    $scope.name.p5.abv = ""
+    if ($scope.structureCombinations[structureCombination].keys === $scope.name.p5.keys) {
+      $scope.name.p5.abv = $scope.structureCombinations[structureCombination].abv
+      break;
+    } 
+  };
+};
 }]);
