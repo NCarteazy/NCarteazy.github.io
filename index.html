@@ -14,7 +14,7 @@
 <body>
   <div ng-controller="nameController" id="page-wrapper blue">
     <div id="namebox">
-      <h1 ng-repeat="nam in names"><span>{{ nam.p.abv }}</span></h1> <span>- {{date | date:'MMddyy'}}</span>
+      <h1><span ng-repeat="nam in name">{{ nam.p.abv }}</span> - {{date | date:'MMddyy'}}</h1>
     </div>
   <div ng-repeat="nam in name">
   <my-choices>
