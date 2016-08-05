@@ -376,8 +376,6 @@ angular.module('namer', [])
     };
   };
   
-
-  });
 }]);
 
   .directive('myChoices', function() {
@@ -385,4 +383,4 @@ angular.module('namer', [])
     	restrict: 'E',
     	templateUrl: "my-choices.html"
       }
-    }
+    });
