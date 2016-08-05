@@ -376,11 +376,13 @@ angular.module('namer', [])
     };
   };
   
+
+  });
+}]);
+
   .directive('myChoices', function() {
   	return {
     	restrict: 'E',
     	templateUrl: "my-choices.html"
       }
     }
-  });
-}]);
