@@ -39,6 +39,37 @@ angular.module('namer', [])
     }
   };
 
+	$scope.titles = {
+  	"p1t": {
+    	"tit": "Biome",
+      "nameObject": {{ p1.name }}
+    },
+    "p2t": {
+    	"tit": "Resources",
+      "nameObject": {{ p2.name }}
+    },
+    "p3t": {
+    	"tit": "Lifeforms",
+      "nameObject": {{ p3.name }}
+    },
+    "p4t": {
+    	"tit": "Law",
+      "nameObject": {{ p4.name }}
+    },
+    "p5t": {
+    	"tit": "Structures",
+      "nameObject": {{ p5.name }}
+    },
+    "p6t": {
+    	"tit": "Climate",
+      "nameObject": {{ p6.name }}
+    },
+    "p7t": {
+    	"tit": "Direction",
+      "nameObject": {{ p7.name }}
+    },
+  };
+
   $scope.biomes = [{
     "name": "Featureless",
     "abv": "Fe"
@@ -344,4 +375,12 @@ angular.module('namer', [])
       }
     };
   };
+  
+  .directive('myChoices', function() {
+  	return {
+    	restrict: 'E',
+    	templateUrl: "my-choices.html"
+      }
+    }
+  });
 }]);
