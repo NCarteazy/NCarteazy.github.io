@@ -42,31 +42,31 @@ angular.module('namer', [])
 	$scope.titles = {
   	"p1t": {
     	"tit": "Biome",
-      "nameObject": {{ p1.name }}
+      "nameObject": $scope.name.p1.name
     },
     "p2t": {
     	"tit": "Resources",
-      "nameObject": {{ p2.name }}
+      "nameObject": $scope.name.p2.name
     },
     "p3t": {
     	"tit": "Lifeforms",
-      "nameObject": {{ p3.name }}
+      "nameObject": $scope.name.p3.name
     },
     "p4t": {
     	"tit": "Law",
-      "nameObject": {{ p4.name }}
+      "nameObject": $scope.name.p4.name
     },
     "p5t": {
     	"tit": "Structures",
-      "nameObject": {{ p5.name }}
+      "nameObject": $scope.name.p5.name
     },
     "p6t": {
     	"tit": "Climate",
-      "nameObject": {{ p6.name }}
+      "nameObject": $scope.name.p6.name
     },
     "p7t": {
     	"tit": "Direction",
-      "nameObject": {{ p7.name }}
+      "nameObject": $scope.name.p7.name
     },
   };
 
