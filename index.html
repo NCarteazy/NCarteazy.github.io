@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <div ng-controller="nameController">
+  <div ng-controller="nameController" id="page-wrap">
     <div id="namebox">
-      <h1><span>{{ name.p1.abv }}{{ name.p2.abv }}{{ name.p3.abv }}{{ name.p4.abv }}</span></h1>
+      <h1><span>{{ name.p1.abv }}{{ name.p2.abv }}{{ name.p3.abv }}{{ name.p4.abv }}{{ name.p5.abv }}{{ name.p6.abv }} {{ name.p7.abv }} - {{date | date:'MMddyy'}}</span></h1>
     </div>
 
     <div id="Choices">
@@ -22,19 +22,23 @@
       <h2><span>Resources: {{ name.p2.name }}</span></h2>
       <h2><span>Lifeforms: {{ name.p3.name }}</span></h2>
       <h2><span>Law: {{ name.p4.name }}</span></h2>
+      <h2><span>Structures: {{ name.p5.name }}</span></h2>
+      <h2><span>Climate: {{ name.p6.name }}</span></h2>
+      <h2><span>Direction: {{ name.p7.name }}</span></h2>
+
     </div>
 
     <div id="choices">
 
       <label ng-repeat="biome in biomes">
-        <input type='radio' ng-model="name.p1" ng-value="biome" name="prefix">
+        <input type='radio' ng-model="name.p1" ng-value="biome" name="biom">
         <span>{{ biome.name }}</span>
       </label>
       <br>
       <br>
 
       <label ng-repeat="resource in resources">
-        <input type='checkbox' ng-model="resource.boo" ng-change="resourceChange()">
+        <input class="btn" type='checkbox' ng-model="resource.boo" ng-change="resourceChange()">
         <span>{{ resource.name }}</span>
       </label>
       <br>
@@ -48,7 +52,7 @@
       <br>
 
       <input type='checkbox' ng-model="p4choice" ng-change="lawChange()">
-      <span>{{ law.sent.name }}</span>
+      <span>Sentinel Controlled</span>
       <br>
       <br>
 
@@ -59,9 +63,17 @@
       <br>
       <br>
 
-    </div>
-    <div>
-      <span>{{name.p5}}</span>
+      <label ng-repeat="climate in climates">
+        <input type='radio' ng-model="name.p6" ng-value="climate" name="clim">
+        <span>{{ climate.name }}</span>
+      </label>
+      <br>
+      <br>
+
+      <label ng-repeat="direction in directions">
+        <input type='radio' ng-model="name.p7" ng-value="direction" name="dire">
+        <span>{{ direction.name }}</span>
+      </label>
     </div>
   </div>
 </body>
