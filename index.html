@@ -14,27 +14,27 @@
 <body>
   <div ng-controller="nameController" id="page-wrapper blue">
     <div id="namebox">
-      <h1><span>{{ name.p1.abv }}{{ name.p2.abv }}{{ name.p3.abv }}{{ name.p4.abv }}{{ name.p5.abv }}{{ name.p6.abv }} {{ name.p7.abv }} - {{date | date:'MMddyy'}}</span></h1>
+      <h1><span ng-repeat="nam in names">{{ nam.p.abv }}</span> - {{date | date:'MMddyy'}}</h1>
     </div>
-  <div ng-repeat="title in titles">
+  <div ng-repeat="nam in name">
   <my-choices>
   </my-choices>
   </div>
 
     <div id="Choices green">
-      <h2><span>Biome: {{ name.p1.name }}</span></h2>
-      <h2><span>Resources: {{ name.p2.name }}</span></h2>
-      <h2><span>Lifeforms: {{ name.p3.name }}</span></h2>
-      <h2><span>Law: {{ name.p4.name }}</span></h2>
-      <h2><span>Structures: {{ name.p5.name }}</span></h2>
-      <h2><span>Climate: {{ name.p6.name }}</span></h2>
-      <h2><span>Direction: {{ name.p7.name }}</span></h2>
+      <h2><span>Biome: {{ name.cap1.p.name }}</span></h2>
+      <h2><span>Resources: {{ name.cap2.p.name }}</span></h2>
+      <h2><span>Lifeforms: {{ name.cap3.p.name }}</span></h2>
+      <h2><span>Law: {{ name.cap4.p.name }}</span></h2>
+      <h2><span>Structures: {{ name.cap5.p.name }}</span></h2>
+      <h2><span>Climate: {{ name.cap6.p.name }}</span></h2>
+      <h2><span>Direction: {{ name.cap7.p.name }}</span></h2>
     </div>
 
     <div id="choices red">
 
       <label ng-repeat="biome in biomes">
-        <input type='radio' ng-model="name.p1" ng-value="biome" name="biom">
+        <input type='radio' ng-model="name.cap1.p" ng-value="biome" name="biom">
         <span>{{ biome.name }}</span>
       </label>
       <br>
@@ -67,14 +67,14 @@
       <br>
 
       <label ng-repeat="climate in climates">
-        <input type='radio' ng-model="name.p6" ng-value="climate" name="clim">
+        <input type='radio' ng-model="name.cap6.p" ng-value="climate" name="clim">
         <span>{{ climate.name }}</span>
       </label>
       <br>
       <br>
 
       <label ng-repeat="direction in directions">
-        <input type='radio' ng-model="name.p7" ng-value="direction" name="dire">
+        <input type='radio' ng-model="name.cap7.p" ng-value="direction" name="dire">
         <span>{{ direction.name }}</span>
       </label>
     </div>
