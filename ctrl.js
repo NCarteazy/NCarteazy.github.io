@@ -376,7 +376,7 @@ angular.module('namer', [])
     };
   };
   
-}]);
+}])
 
   .directive('myChoices', function() {
   	return {
