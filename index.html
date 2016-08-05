@@ -12,12 +12,16 @@
 </head>
 
 <body>
-  <div ng-controller="nameController" id="page-wrap">
+  <div ng-controller="nameController" id="page-wrapper blue">
     <div id="namebox">
       <h1><span>{{ name.p1.abv }}{{ name.p2.abv }}{{ name.p3.abv }}{{ name.p4.abv }}{{ name.p5.abv }}{{ name.p6.abv }} {{ name.p7.abv }} - {{date | date:'MMddyy'}}</span></h1>
     </div>
+  <div ng-repeat="title in titles">
+  <my-choices>
+  </my-choices>
+  </div>
 
-    <div id="Choices">
+    <div id="Choices green">
       <h2><span>Biome: {{ name.p1.name }}</span></h2>
       <h2><span>Resources: {{ name.p2.name }}</span></h2>
       <h2><span>Lifeforms: {{ name.p3.name }}</span></h2>
@@ -25,10 +29,9 @@
       <h2><span>Structures: {{ name.p5.name }}</span></h2>
       <h2><span>Climate: {{ name.p6.name }}</span></h2>
       <h2><span>Direction: {{ name.p7.name }}</span></h2>
-
     </div>
 
-    <div id="choices">
+    <div id="choices red">
 
       <label ng-repeat="biome in biomes">
         <input type='radio' ng-model="name.p1" ng-value="biome" name="biom">
