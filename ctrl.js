@@ -369,6 +369,13 @@ angular.module('namer', [])
   
 }])
 
+  .directive('nameBox', function() {
+  	return {
+    	restrict: 'E',
+    	templateUrl: "name-box.html"
+      }
+    })
+
   .directive('myChoices', function() {
   	return {
     	restrict: 'E',
