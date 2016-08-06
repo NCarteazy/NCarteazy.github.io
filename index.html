@@ -1,75 +1,76 @@
 <!doctype html>
 <html lang="en" ng-app="namer">
-<head>
-	<title> NMS Planet Namer </title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- CSS/JS -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-	<script src="ctrl.js"></script>
-	<link href="style.css" type="text/css" rel="stylesheet">
-</head>
+  <head>
+    <title> NMS Planet Namer </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
-  <div ng-controller="nameController" id="page-wrapper blue">
+    <!-- CSS/JS -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="ctrl.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
 
-    <name-box></name-box>
+  <body>
+    <div ng-controller="nameController" id="page-wrapper blue">
 
-  
-  <my-choices></my-choices>
+      <name-box></name-box>
 
 
-    <div id="choices red">
+      <my-choices></my-choices>
 
 
-    <pick-choice type="biome"></pick-choice>
+      <div id="choices red">
 
-    
-      <label ng-repeat="biome in biomes">
-        <input type='radio' ng-model="name.cap1.p" ng-value="biome" name="biom">
-        <span>{{ biome.name }}</span>
-      </label>
-      <br>
-      <br>
 
-      <label ng-repeat="resource in resources">
-        <input class="btn" type='checkbox' ng-model="resource.boo" ng-change="resourceChange()">
-        <span>{{ resource.name }}</span>
-      </label>
-      <br>
-      <br>
+        <div pick-choice type="biome"></div>
 
-      <label ng-repeat="lifeform in lifeforms">
-        <input type='checkbox' ng-model="lifeform.boo" ng-change="lifeformChange()">
-        <span>{{ lifeform.name }}</span>
-      </label>
-      <br>
-      <br>
 
-      <input type='checkbox' ng-model="p4choice" ng-change="lawChange()">
-      <span>Sentinel Controlled</span>
-      <br>
-      <br>
+        <label ng-repeat="biome in biomes">
+          <input type='radio' ng-model="name.cap1.p" ng-value="biome" name="biom">
+          <span>{{ biome.name }}</span>
+        </label>
+        <br>
+        <br>
 
-      <label ng-repeat="structure in structures">
-        <input type='checkbox' ng-model="structure.boo" ng-change="structureChange()">
-        <span>{{ structure.name }}</span>
-      </label>
-      <br>
-      <br>
+        <label ng-repeat="resource in resources">
+          <input class="btn" type='checkbox' ng-model="resource.boo" ng-change="resourceChange()">
+          <span>{{ resource.name }}</span>
+        </label>
+        <br>
+        <br>
 
-      <label ng-repeat="climate in climates">
-        <input type='radio' ng-model="name.cap6.p" ng-value="climate" name="clim">
-        <span>{{ climate.name }}</span>
-      </label>
-      <br>
-      <br>
+        <label ng-repeat="lifeform in lifeforms">
+          <input type='checkbox' ng-model="lifeform.boo" ng-change="lifeformChange()">
+          <span>{{ lifeform.name }}</span>
+        </label>
+        <br>
+        <br>
 
-      <label ng-repeat="direction in directions">
-        <input type='radio' ng-model="name.cap7.p" ng-value="direction" name="dire">
-        <span>{{ direction.name }}</span>
-      </label>
+        <input type='checkbox' ng-model="p4choice" ng-change="lawChange()">
+        <span>Sentinel Controlled</span>
+        <br>
+        <br>
+
+        <label ng-repeat="structure in structures">
+          <input type='checkbox' ng-model="structure.boo" ng-change="structureChange()">
+          <span>{{ structure.name }}</span>
+        </label>
+        <br>
+        <br>
+
+        <label ng-repeat="climate in climates">
+          <input type='radio' ng-model="name.cap6.p" ng-value="climate" name="clim">
+          <span>{{ climate.name }}</span>
+        </label>
+        <br>
+        <br>
+
+        <label ng-repeat="direction in directions">
+          <input type='radio' ng-model="name.cap7.p" ng-value="direction" name="dire">
+          <span>{{ direction.name }}</span>
+        </label>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
