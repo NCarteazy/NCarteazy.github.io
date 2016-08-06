@@ -6,57 +6,57 @@ angular.module('namer', [])
   $scope.date = new Date();
 
   $scope.name = {
-  	"cap1":{
-    	"tit": "Biome",
-    	"p": {
-      	"name": "Featureless",
-      	"abv": "Fe"
-    	}
-	},
-    "cap2":{
-    	"tit": "Resources",
-    	"p": {
-      "keys": "",
-      "name": "None",
-      "abv": "zil"
-  }
+    "cap1": {
+      "tit": "Biome",
+      "p": {
+        "name": "Featureless",
+        "abv": "Fe"
+      }
     },
-    "cap3":{
-    	"tit": "Lifeforms",
-    	"p": {
-      "key": "",
-      "name": "None",
-      "abv": "u"
-  }
+    "cap2": {
+      "tit": "Resources",
+      "p": {
+        "keys": "",
+        "name": "None",
+        "abv": "zil"
+      }
     },
-    "cap4":{
-    	"tit": "Law",
-    	"p": {
-      "name": "Lawless",
-      "abv": "l"
-  }
+    "cap3": {
+      "tit": "Lifeforms",
+      "p": {
+        "key": "",
+        "name": "None",
+        "abv": "u"
+      }
     },
-    "cap5":{
-    	"tit": "Structures",
-    	"p": {
-      "keys": "",
-      "name": "None",
-      "abv": "no"
-  }
+    "cap4": {
+      "tit": "Law",
+      "p": {
+        "name": "Lawless",
+        "abv": "l"
+      }
     },
-    "cap6":{
-    	"tit": "Climate",
-    	"p": {
-      "name": "Safe",
-      "abv": "sa"
-  }
+    "cap5": {
+      "tit": "Structures",
+      "p": {
+        "keys": "",
+        "name": "None",
+        "abv": "no"
+      }
     },
-    "cap7":{
-    	"tit": "Direction",
-    	"p": {
-      "name": "Going Toward Center",
-      "abv": "GTC"
-  }
+    "cap6": {
+      "tit": "Climate",
+      "p": {
+        "name": "Safe",
+        "abv": "sa"
+      }
+    },
+    "cap7": {
+      "tit": "Direction",
+      "p": {
+        "name": "Going Toward Center",
+        "abv": "GTC"
+      }
     }
   };
 
@@ -366,27 +366,27 @@ angular.module('namer', [])
       }
     };
   };
-  
+
 }])
 
-  .directive('nameBox', function() {
-  	return {
-    	restrict: 'E',
-    	templateUrl: "name-box.html"
-      }
-    })
+.directive('nameBox', function() {
+  return {
+    restrict: 'E',
+    templateUrl: "name-box.html"
+  }
+})
 
-  .directive('myChoices', function() {
-  	return {
-    	restrict: 'E',
-    	templateUrl: "my-choices.html"
-      }
-    })
+.directive('myChoices', function() {
+  return {
+    restrict: 'E',
+    templateUrl: "my-choices.html"
+  }
+})
 
-  .directive('pickChoice', function() {
-  	return {
-    	templateUrl: function(elem, attr) {
-      	return attr.type + '-choice.html';
-      	}
+.directive('pickChoice', function() {
+  return {
+    templateUrl: function(elem, attr) {
+      return attr.type + '-choice.html';
     }
-    });
+  }
+});
