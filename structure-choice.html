@@ -1,4 +1,4 @@
-<label class="structure choice" ng-repeat="structure in structures">
-	<input type='checkbox' ng-model="structure.boo" ng-change="structureChange()">
+<label ng-repeat="structure in structures">
+	<input class="w3-check" type='checkbox' ng-model="structure.boo" ng-change="structureChange()">
 	<span>{{ structure.name }}</span>
 </label>

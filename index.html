@@ -5,27 +5,41 @@
     <title> NMS Planet Namer </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS/JS -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="ctrl.js"></script>
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   </head>
 
 <body>
 	<div ng-controller="nameController" id="page-wrapper blue">
 
-		<name-box></name-box>
+		<name-box class="w3-container w3-cyan w3-card-2"></name-box>
 
-		<my-choices></my-choices>
+		<my-choices class="w3-container w3-section w3-card-2 w3-border"></my-choices>
 
-		<div pick-choice type="biome"></div>
-		<div pick-choice type="resource"></div>
-		<div pick-choice type="lifeform"></div>
-		<div pick-choice type="law"></div>
-		<div pick-choice type="structure"></div>
-		<div pick-choice type="climate"></div>
-		<div pick-choice type="direction"></div>
+		<div class="w3-section w3-card-2 w3-border w3-accordion w3-light-grey">
+			<button onclick="expand('biome')" class="w3-btn-block">Biome</button>
+			<div pick-choice id="biome" class="w3-accordion-content w3-container choice" type="biome"></div>
+			
+<button onclick="expand('resource')" class="w3-btn-block">Resources</button>
+			<div pick-choice id="resource" class="w3-accordion-content w3-container choice" type="resource"></div>
+			
+ <button onclick="expand('lifeform')" class="w3-btn-block">Lifeforms</button>
+			<div pick-choice id="lifeform" class="w3-accordion-content w3-container choice" type="lifeform"></div>
+			
+<button onclick="expand('law')" class="w3-btn-block">Law</button>
+			<div pick-choice id="law" class="w3-accordion-content w3-container choice" type="law"></div>
+			
+<button onclick="expand('structure')" class="w3-btn-block">Structures</button>
+			<div pick-choice id="structure" class="w3-accordion-content w3-container choice" type="structure"></div>
+			
+<button onclick="expand('climate')" class="w3-btn-block">Climate</button>
+			<div pick-choice id="climate" class="w3-accordion-content w3-container choice" type="climate"></div>
+			
+			 <button onclick="expand('direction')" class="w3-btn-block">Direction</button>
+			<div pick-choice id="direction" class="w3-accordion-content w3-container choice" type="direction"></div>
+		
+		</div>
 
 	</div>
 </body>
