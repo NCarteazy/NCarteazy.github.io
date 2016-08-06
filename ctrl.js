@@ -387,5 +387,6 @@ angular.module('namer', [])
   	return {
     	templateUrl: function(elem, attr) {
       	return attr.type + '-choice.html';
-      }
+      	}
+    }
     });
