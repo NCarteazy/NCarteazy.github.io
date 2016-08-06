@@ -12,66 +12,20 @@
     <link href="style.css" type="text/css" rel="stylesheet">
   </head>
 
-  <body>
-    <div ng-controller="nameController" id="page-wrapper blue">
+<body>
+	<div ng-controller="nameController" id="page-wrapper blue">
 
-      <name-box></name-box>
+		<name-box></name-box>
 
+		<my-choices></my-choices>
 
-      <my-choices></my-choices>
+		<div pick-choice type="biome"></div>
+		<div pick-choice type="resource"></div>
+		<div pick-choice type="lifeform"></div>
+		<div pick-choice type="law"></div>
+		<div pick-choice type="structure"></div>
+		<div pick-choice type="climate"></div>
+		<div pick-choice type="direction"></div>
 
-
-      <div id="choices red">
-
-
-        <div pick-choice type="biome"></div>
-        <div pick-choice type="resource"></div>
-        <div pick-choice type="lifeform"></div>
-        <div pick-choice type="law"></div>
-        <div pick-choice type="structure"></div>
-        <div pick-choice type="climate"></div>
-        <div pick-choice type="direction"></div>
-
-        <br>
-        <br>
-
-        <label ng-repeat="resource in resources">
-          <input class="btn" type='checkbox' ng-model="resource.boo" ng-change="resourceChange()">
-          <span>{{ resource.name }}</span>
-        </label>
-        <br>
-        <br>
-
-        <label ng-repeat="lifeform in lifeforms">
-          <input type='checkbox' ng-model="lifeform.boo" ng-change="lifeformChange()">
-          <span>{{ lifeform.name }}</span>
-        </label>
-        <br>
-        <br>
-
-        <input type='checkbox' ng-model="p4choice" ng-change="lawChange()">
-        <span>Sentinel Controlled</span>
-        <br>
-        <br>
-
-        <label ng-repeat="structure in structures">
-          <input type='checkbox' ng-model="structure.boo" ng-change="structureChange()">
-          <span>{{ structure.name }}</span>
-        </label>
-        <br>
-        <br>
-
-        <label ng-repeat="climate in climates">
-          <input type='radio' ng-model="name.cap6.p" ng-value="climate" name="clim">
-          <span>{{ climate.name }}</span>
-        </label>
-        <br>
-        <br>
-
-        <label ng-repeat="direction in directions">
-          <input type='radio' ng-model="name.cap7.p" ng-value="direction" name="dire">
-          <span>{{ direction.name }}</span>
-        </label>
-      </div>
-    </div>
-  </body>
+	</div>
+</body>
