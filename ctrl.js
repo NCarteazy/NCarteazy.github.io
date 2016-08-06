@@ -381,4 +381,11 @@ angular.module('namer', [])
     	restrict: 'E',
     	templateUrl: "my-choices.html"
       }
+    })
+
+  .directive('pickChoice', function() {
+  	return {
+    	templateUrl: function(elem, attr) {
+      	return attr.type + '-choice.html';
+      }
     });
