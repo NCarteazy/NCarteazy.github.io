@@ -330,7 +330,7 @@ angular.module('namer', [])
     };
     for (var lifeform in $scope.lifeforms) {
       $scope.name.cap3.p.abv = ""
-      if ($scope.lifeforms[lifeform].key === $scope.name.p.key) {
+      if ($scope.lifeforms[lifeform].key === $scope.name.cap3.p.key) {
         $scope.name.cap3.p.abv = $scope.lifeforms[lifeform].abv
         break;
       } else if ($scope.name.cap3.p.key.length >= 2) {
