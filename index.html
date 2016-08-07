@@ -11,11 +11,15 @@
   </head>
 
 <body>
-	<div ng-controller="nameController" id="page-wrapper">
+	<div ng-controller="nameController" id="page-wrapper" class="w3-content">
 
+		<div class="w3-container w3-cyan w3-card-2">
 		<name-box ></name-box>
-
+		</div>
+		
+		<div class="w3-container w3-section w3-card-2 w3-border">
 		<my-choices ></my-choices>
+		</div>
 
 		<div class="w3-section w3-card-2 w3-border w3-accordion w3-light-grey">
 			<button onclick="expand('biome')" class="w3-btn-block">Biome</button>
