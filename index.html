@@ -14,17 +14,17 @@
   </head>
 
 <body>
-	<div ng-controller="nameController" id="page-wrapper" class="container-fluid">
+	<div ng-controller="nameController" id="page-wrapper" class="container">
 
-			<div class="container col-md-12">
+			<div class="container">
 			<name-box></name-box>
 			</div>
 			
-			<div class="container col-md-6">
+			<div class="container>
 			<my-choices></my-choices>
 			</div>
 
-		<div class="container col-md-6">
+		<div class="container">
 			
 			<div pick-choice id="biome" class="radio" type="biome"></div>
 			
@@ -49,4 +49,17 @@
 		</div>
 
 	</div>
+
+	<div id="accordion" class="accordion">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Find Cafe
+            </a>
+            <div id="collapseOne" class="accordion-body collapse in">
+                 <div class="accordion-inner">
+                    Anim pariatur cliche...
+                 </div>
+            </div>
+     </div>
+</div>
 </body>
