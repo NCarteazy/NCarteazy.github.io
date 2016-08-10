@@ -65,7 +65,7 @@ angular.module('namer', [])
       "tit": "Resources",
       "type": "resource",
       "select": "c",
-      "pos": 1,
+      "pos": "1",
       "p": {
         "keys": "",
         "name": "None",
@@ -76,7 +76,7 @@ angular.module('namer', [])
       "tit": "Lifeforms",
       "type": "lifeform",
       "select": "c",
-      "pos": 2,
+      "pos": "2",
       "p": {
         "key": "",
         "name": "None",
@@ -87,7 +87,7 @@ angular.module('namer', [])
       "tit": "Law",
       "type": "law",
       "select": "r",
-      "pos": 3,
+      "pos": "3",
       "p": {
         "name": "Lawless",
         "abv": "l"
@@ -97,7 +97,7 @@ angular.module('namer', [])
       "tit": "Structures",
       "type": "structure",
       "select": "c",
-      "pos": 4,
+      "pos": "4",
       "p": {
         "keys": "",
         "name": "None",
@@ -108,7 +108,7 @@ angular.module('namer', [])
       "tit": "Climate",
       "type": "climate",
       "select": "r",
-      "pos": 5,
+      "pos": "5",
       "p": {
         "name": "Safe",
         "abv": "sa"
@@ -139,7 +139,7 @@ angular.module('namer', [])
       "tit": "Direction",
       "type": "direction",
       "select": "r",
-      "pos": 6,
+      "pos": "6",
       "p": {
         "name": "Going Toward Center",
         "abv": "GTC"
