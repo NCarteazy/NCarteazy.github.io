@@ -50,3 +50,20 @@
 
 	</div>
 </body>
+
+<div ng-repeat="category in name">
+
+	<h3><strong>{{category.tit}}</strong>: {{category.p.name}}</h3>
+	<button class="btn btn-default" ng-click="lister(category.type);">
+		Change
+	</button>
+
+	<div id="{{category.type}}" ng-repeat="choices in category.list">
+
+		<button ng-click="changer(choices.type, choices)"> 
+			{{choices.name}}
+		</button>
+
+	</div>
+
+</div>
