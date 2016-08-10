@@ -390,3 +390,8 @@ angular.module('namer', [])
     }
   }
 });
+
+
+function expanderino() {
+  document.getElementById("biome").classList.add("hidden");
+}
