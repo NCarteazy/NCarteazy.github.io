@@ -16,7 +16,7 @@ angular.module('namer', [])
     },
     "cap2": {
       "tit": "Resources",
-      "type": "resources",
+      "type": "resource",
       "p": {
         "keys": "",
         "name": "None",
@@ -25,7 +25,7 @@ angular.module('namer', [])
     },
     "cap3": {
       "tit": "Lifeforms",
-      "type": "lifeforms",
+      "type": "lifeform",
       "p": {
         "key": "",
         "name": "None",
@@ -42,7 +42,7 @@ angular.module('namer', [])
     },
     "cap5": {
       "tit": "Structures",
-      "type": "structures",
+      "type": "structure",
       "p": {
         "keys": "",
         "name": "None",
@@ -281,7 +281,12 @@ angular.module('namer', [])
   $scope.lister = function(type) {
   console.log(type)
   var dList = document.getElementById(type).classList;
-  dList.add("hidden");
+  if(dList.contains("hidden")) {
+    dList.remove("hidden");
+  }
+  else {
+    dList.add("hidden");
+  }
   }
 
   $scope.lawChange = function() {
