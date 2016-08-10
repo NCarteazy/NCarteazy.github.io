@@ -286,6 +286,7 @@ angular.module('namer', [])
   $scope.changer = function(target, missile) {
     console.log(missile.name + " heads towards " + target);
     for (var resource in $scope.name) {
+      console.log(resource.type + " vs " + target)
       if(resource.type === target)
         {
           resource.p = missile;
