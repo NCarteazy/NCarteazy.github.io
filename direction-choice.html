@@ -1,4 +1,5 @@
 <label ng-repeat="direction in directions">
-  	<input type='radio' ng-model="name.cap7.p" ng-value="direction" name="dire">
+  	<input type='radio' ng-model="name.direction.p" ng-value="direction" name="dire">
   	<span>{{ direction.name }}</span>
+  	<button ng-click="changer(name.direction.p, direction)"> {{direction.name}}</button>
 </label>
