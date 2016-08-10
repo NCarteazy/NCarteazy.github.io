@@ -392,6 +392,6 @@ angular.module('namer', [])
 });
 
 
-function expanderino() {
+function lister(name) {
   document.getElementById("biome").classList.add("hidden");
 }
