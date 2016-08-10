@@ -8,6 +8,7 @@ angular.module('namer', [])
   $scope.name = {
     "cap1": {
       "tit": "Biome",
+      "type": "biome",
       "p": {
         "name": "Featureless",
         "abv": "Fe"
@@ -15,6 +16,7 @@ angular.module('namer', [])
     },
     "cap2": {
       "tit": "Resources",
+      "type": "resources",
       "p": {
         "keys": "",
         "name": "None",
@@ -23,6 +25,7 @@ angular.module('namer', [])
     },
     "cap3": {
       "tit": "Lifeforms",
+      "type": "lifeforms",
       "p": {
         "key": "",
         "name": "None",
@@ -31,6 +34,7 @@ angular.module('namer', [])
     },
     "cap4": {
       "tit": "Law",
+      "type": "law",
       "p": {
         "name": "Lawless",
         "abv": "l"
@@ -38,6 +42,7 @@ angular.module('namer', [])
     },
     "cap5": {
       "tit": "Structures",
+      "type": "structures",
       "p": {
         "keys": "",
         "name": "None",
@@ -46,6 +51,7 @@ angular.module('namer', [])
     },
     "cap6": {
       "tit": "Climate",
+      "type": "climate",
       "p": {
         "name": "Safe",
         "abv": "sa"
@@ -53,6 +59,7 @@ angular.module('namer', [])
     },
     "cap7": {
       "tit": "Direction",
+      "type": "direction",
       "p": {
         "name": "Going Toward Center",
         "abv": "GTC"
@@ -392,6 +399,7 @@ angular.module('namer', [])
 });
 
 
-function lister() {
-  document.getElementById("biome").classList.add("hidden");
+function lister(type) {
+  var dList = document.getElementById(type).classList;
+  dList.add("hidden");
 }
