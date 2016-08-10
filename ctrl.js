@@ -295,7 +295,7 @@ angular.module('namer', [])
   };
 
   $scope.lister = function(type) {
-  console.log(type)
+  console.log(type);
   var dList = document.getElementById(type).classList;
   if(dList.contains("hidden")) {
     dList.remove("hidden");
@@ -303,102 +303,102 @@ angular.module('namer', [])
   else {
     dList.add("hidden");
   }
-  }
+  };
 
   $scope.lawChange = function() {
     if ($scope.name.law.p.abv === "l") {
       $scope.name.law.p = $scope.sent;
     } else {
       $scope.name.law.p = $scope.lawless;
-    };
+    }
   };
 
   $scope.resourceChange = function() {
-    $scope.name.resource.p.keys = ""
-    $scope.name.resource.p.name = ""
+    $scope.name.resource.p.keys = "";
+    $scope.name.resource.p.name = "";
     for (var resource in $scope.resources) {
       if ($scope.resources[resource].boo) {
         if (!$scope.name.resource.p.keys) {
-          $scope.name.resource.p.keys = $scope.resources[resource].key
-          $scope.name.resource.p.name = $scope.resources[resource].name
+          $scope.name.resource.p.keys = $scope.resources[resource].key;
+          $scope.name.resource.p.name = $scope.resources[resource].name;
         } else {
-          $scope.name.resource.p.keys = $scope.name.resource.p.keys + $scope.resources[resource].key
-          $scope.name.resource.p.name = $scope.name.resource.p.name + "/" + $scope.resources[resource].name
+          $scope.name.resource.p.keys = $scope.name.resource.p.keys + $scope.resources[resource].key;
+          $scope.name.resource.p.name = $scope.name.resource.p.name + "/" + $scope.resources[resource].name;
         }
-      };
-    };
+      }
+    }
     for (var resourceCombination in $scope.resourceCombinations) {
-      $scope.name.resource.p.abv = ""
+      $scope.name.resource.p.abv = "";
       if ($scope.resourceCombinations[resourceCombination].keys === $scope.name.resource.p.keys) {
-        $scope.name.resource.p.abv = $scope.resourceCombinations[resourceCombination].abv
+        $scope.name.resource.p.abv = $scope.resourceCombinations[resourceCombination].abv;
         break;
       } else if ($scope.name.resource.p.keys.length >= 3) {
         if ($scope.name.resource.p.keys.indexOf('d') == -1) {
-          $scope.name.resource.p.abv = 'nth'
+          $scope.name.resource.p.abv = 'nth';
           break;
         } else {
-          $scope.name.resource.p.abv = 'bth'
+          $scope.name.resource.p.abv = 'bth';
           break;
-        };
-      } else if ($scope.name.resource.p.keys == 0) {
-        $scope.name.resource.p.name = "None"
-        $scope.name.resource.p.abv = 'zil'
+        }
+      } else if ($scope.name.resource.p.keys === 0) {
+        $scope.name.resource.p.name = "None";
+        $scope.name.resource.p.abv = 'zil';
         break;
-      };
-    };
+      }
+    }
   };
 
   $scope.lifeformChange = function() {
-    $scope.name.lifeform.p.key = ""
-    $scope.name.lifeform.p.name = ""
-    for (var lifeform in $scope.lifeforms) {
-      if ($scope.lifeforms[lifeform].boo) {
+    $scope.name.lifeform.p.key = "";
+    $scope.name.lifeform.p.name = "";
+    for (var lf in $scope.lifeforms) {
+      if ($scope.lifeforms[lf].boo) {
         if (!$scope.name.lifeform.p.key) {
-          $scope.name.lifeform.p.key = $scope.lifeforms[lifeform].key
-          $scope.name.lifeform.p.name = $scope.lifeforms[lifeform].name
+          $scope.name.lifeform.p.key = $scope.lifeforms[lf].key;
+          $scope.name.lifeform.p.name = $scope.lifeforms[lf].name;
         } else {
-          $scope.name.lifeform.p.key = $scope.name.lifeform.p.key + $scope.lifeforms[lifeform].key
-          $scope.name.lifeform.p.name = $scope.name.lifeform.p.name + "/" + $scope.lifeforms[lifeform].name
+          $scope.name.lifeform.p.key = $scope.name.lifeform.p.key + $scope.lifeforms[lf].key;
+          $scope.name.lifeform.p.name = $scope.name.lifeform.p.name + "/" + $scope.lifeforms[lf].name;
         }
-      };
-    };
-    for (var lifeform in $scope.lifeforms) {
-      $scope.name.lifeform.p.abv = ""
-      if ($scope.lifeforms[lifeform].key === $scope.name.lifeform.p.key) {
-        $scope.name.lifeform.p.abv = $scope.lifeforms[lifeform].abv
+      }
+    }
+    for (var lf2 in $scope.lifeforms) {
+      $scope.name.lifeform.p.abv = "";
+      if ($scope.lifeforms[lf2].key === $scope.name.lifeform.p.key) {
+        $scope.name.lifeform.p.abv = $scope.lifeforms[lf2].abv;
         break;
       } else if ($scope.name.lifeform.p.key.length >= 2) {
-        $scope.name.lifeform.p.abv = 'a'
+        $scope.name.lifeform.p.abv = 'a';
         break;
-      } else if ($scope.name.lifeform.p.key == 0) {
-        $scope.name.lifeform.p.name = "None"
-        $scope.name.lifeform.p.abv = 'u'
+      } else if ($scope.name.lifeform.p.key === 0) {
+        $scope.name.lifeform.p.name = "None";
+        $scope.name.lifeform.p.abv = 'u';
         break;
-      };
-    };
+      }
+    }
   };
 
   $scope.structureChange = function() {
-    $scope.name.structure.p.keys = ""
-    $scope.name.structure.p.name = ""
+    $scope.name.structure.p.keys = "";
+    $scope.name.structure.p.name = "";
     for (var structure in $scope.structures) {
       if ($scope.structures[structure].boo) {
         if (!$scope.name.structure.p.keys) {
-          $scope.name.structure.p.keys = $scope.structures[structure].key
-          $scope.name.structure.p.name = $scope.structures[structure].name
+          $scope.name.structure.p.keys = $scope.structures[structure].key;
+          $scope.name.structure.p.name = $scope.structures[structure].name;
         } else {
-          $scope.name.structure.p.keys = $scope.name.structure.p.keys + $scope.structures[structure].key
-          $scope.name.structure.p.name = $scope.name.structure.p.name + "/" + $scope.structures[structure].name
+          $scope.name.structure.p.keys = $scope.name.structure.p.keys + $scope.structures[structure].key;
+          $scope.name.structure.p.name = $scope.name.structure.p.name + "/" + $scope.structures[structure].name;
         }
-      };
-    };
+      }
+    }
     for (var structureCombination in $scope.structureCombinations) {
-      $scope.name.structure.p.abv = ""
+      $scope.name.structure.p.abv = "";
       if ($scope.structureCombinations[structureCombination].keys === $scope.name.structure.p.keys) {
-        $scope.name.structure.p.abv = $scope.structureCombinations[structureCombination].abv
+        $scope.name.structure.p.abv = $scope.structureCombinations[structureCombination].abv;
         break;
       }
-    };
+    }
   };
 
 }])
@@ -407,14 +407,14 @@ angular.module('namer', [])
   return {
     restrict: 'E',
     templateUrl: "name-box.html"
-  }
+  };
 })
 
 .directive('myChoices', function() {
   return {
     restrict: 'E',
     templateUrl: "my-choices.html"
-  }
+  };
 })
 
 .directive('pickChoice', function() {
@@ -422,5 +422,5 @@ angular.module('namer', [])
     templateUrl: function(elem, attr) {
       return attr.type + '-choice.html';
     }
-  }
+  };
 });
