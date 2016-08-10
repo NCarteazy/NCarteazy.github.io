@@ -399,7 +399,7 @@ angular.module('namer', [])
 });
 
 
-function lister(type) {
-  var dList = document.getElementById(type).classList;
+function lister() {
+  var dList = document.getElementById("biome").classList;
   dList.add("hidden");
 }
