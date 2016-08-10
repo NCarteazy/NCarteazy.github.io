@@ -278,6 +278,12 @@ angular.module('namer', [])
     "abv": "WAR"
   }];
 
+  $scope.lister = function(type) {
+  console.log(type)
+  var dList = document.getElementById(type).classList;
+  dList.add("hidden");
+  }
+
   $scope.lawChange = function() {
     if ($scope.name.cap4.p.abv === "l") {
       $scope.name.cap4.p = $scope.sent;
@@ -397,10 +403,3 @@ angular.module('namer', [])
     }
   }
 });
-
-
-function lister(type) {
-  console.log(type)
-  var dList = document.getElementById(type).classList;
-  dList.add("hidden");
-}
