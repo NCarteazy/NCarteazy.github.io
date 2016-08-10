@@ -263,23 +263,28 @@ angular.module('namer', [])
 
   $scope.directions = [{
     "name": "Going Toward Center",
+    "type": "direction",
     "abv": "GTC"
   }, {
     "name": "Going Toward Edge",
+    "type": "direction",
     "abv": "GTE"
   }, {
     "name": "Moving Laterally",
+    "type": "direction",
     "abv": "MOL"
   }, {
     "name": "Staying In Solar System",
+    "type": "direction",
     "abv": "SIS"
   }, {
     "name": "Warping",
+    "type": "direction",
     "abv": "WAR"
   }];
 
   $scope.changer = function(target, missile) {
-    console.log(missile.name + " heads towards " + target.tit);
+    console.log(missile.name + " heads towards " + target);
     for (var resource in $scope.name) {
       if(resource.type === target)
         {
