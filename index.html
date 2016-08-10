@@ -5,43 +5,46 @@
     <title> NMS Planet Namer </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="ctrl.js"></script>
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
 
 <body>
 	<div ng-controller="nameController" id="page-wrapper" class="w3-content">
 
-		<div class="w3-container w3-cyan w3-card-2">
+		<div class="">
 		<name-box ></name-box>
 		</div>
 		
-		<div class="w3-container w3-section w3-card-2 w3-border">
+		<div class="">
 		<my-choices ></my-choices>
 		</div>
 
-		<div class="w3-section w3-card-2 w3-border w3-accordion w3-light-grey">
-			<button onclick="expand('biome')" class="w3-btn-block">Biome</button>
-			<div pick-choice id="biome" class="w3-accordion-content w3-container choice" type="biome"></div>
+		<div class="">
 			
-<button onclick="expand('resource')" class="w3-btn-block">Resources</button>
-			<div pick-choice id="resource" class="w3-accordion-content w3-container choice w3-padding-8" type="resource"></div>
+			<div pick-choice id="biome" class=" choice" type="biome"></div>
 			
- <button onclick="expand('lifeform')" class="w3-btn-block">Lifeforms</button>
-			<div pick-choice id="lifeform" class="w3-accordion-content w3-container choice w3-padding-8" type="lifeform"></div>
+
+			<div pick-choice id="resource" class="choice w3-padding-8" type="resource"></div>
 			
-<button onclick="expand('law')" class="w3-btn-block">Law</button>
-			<div pick-choice id="law" class="w3-accordion-content w3-container choice w3-padding-8" type="law"></div>
+
+			<div pick-choice id="lifeform" class="choice w3-padding-8" type="lifeform"></div>
 			
-<button onclick="expand('structure')" class="w3-btn-block">Structures</button>
-			<div pick-choice id="structure" class="w3-accordion-content w3-container choice w3-padding-8" type="structure"></div>
+
+			<div pick-choice id="law" class="choice w3-padding-8" type="law"></div>
 			
-<button onclick="expand('climate')" class="w3-btn-block">Climate</button>
-			<div pick-choice id="climate" class="w3-accordion-content w3-container choice w3-padding-8" type="climate"></div>
+
+			<div pick-choice id="structure" class="choice w3-padding-8" type="structure"></div>
 			
-			 <button onclick="expand('direction')" class="w3-btn-block">Direction</button>
-			<div pick-choice id="direction" class="w3-accordion-content w3-container choice w3-padding-8" type="direction"></div>
+
+			<div pick-choice id="climate" class="choice w3-padding-8" type="climate"></div>
+			
+
+			<div pick-choice id="direction" class="" type="direction"></div>
 		
 		</div>
 
