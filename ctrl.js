@@ -168,7 +168,51 @@ angular.module('namer', [])
     }
   };
 
-
+  $scope.biomes = [{
+    "name": "Featureless",
+    "type": "biome",
+    "abv": "Fe"
+  }, {
+    "name": "Desert",
+    "type": "biome",
+    "abv": "De"
+  }, {
+    "name": "Floating Islands",
+    "type": "biome",
+    "abv": "Fi"
+  }, {
+    "name": "Grassy Areas/Plains",
+    "type": "biome",
+    "abv": "Ga"
+  }, {
+    "name": "Lava",
+    "type": "biome",
+    "abv": "La"
+  }, {
+    "name": "Liquid",
+    "type": "biome",
+    "abv": "Li"
+  }, {
+    "name": "Mountains",
+    "type": "biome",
+    "abv": "Mo"
+  }, {
+    "name": "Pillars",
+    "type": "biome",
+    "abv": "Pi"
+  }, {
+    "name": "Rocky",
+    "type": "biome",
+    "abv": "Ro"
+  }, {
+    "name": "Snow/Ice",
+    "type": "biome",
+    "abv": "Si"
+  }, {
+    "name": "Weird Stuff",
+    "type": "biome",
+    "abv": "We"
+  }];
 
   $scope.resources = [{
     "name": "Ship",
