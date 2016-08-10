@@ -400,6 +400,7 @@ angular.module('namer', [])
 
 
 function lister(type) {
+  console.log(type)
   var dList = document.getElementById(type).classList;
   dList.add("hidden");
 }
