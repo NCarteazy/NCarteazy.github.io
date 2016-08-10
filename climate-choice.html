@@ -1,4 +1,5 @@
 <label ng-repeat="climate in climates">
   	<input type='radio' ng-model="name.climate.p" ng-value="climate" name="clim">
   	<span>{{ climate.name }}</span>
+  	<button ng-click="changer(climate.type, climate)"> {{climate.name}}</button>
 </label>
