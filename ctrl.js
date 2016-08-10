@@ -279,8 +279,14 @@ angular.module('namer', [])
   }];
 
   $scope.changer = function(target, missile) {
-    console.log(missile + " heads towards " + target);
-    target=missile;
+    console.log(missile.name + " heads towards " + target.tit);
+    for (var resource in $scope.name) {
+      if(resource.type === target)
+        {
+          resource.p = missile;
+          console.log("missile reached");
+        }
+      }
   };
 
   $scope.lister = function(type) {
