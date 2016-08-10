@@ -9,59 +9,63 @@ angular.module('namer', [])
     "biome": {
       "tit": "Biome",
       "type": "biome",
+      "select": "r",
+      "pos": 0,
       "p": {
         "name": "Featureless",
         "abv": "Fe"
       },
       "list": [{
-    "name": "Featureless",
-    "type": "biome",
-    "abv": "Fe"
-  }, {
-    "name": "Desert",
-    "type": "biome",
-    "abv": "De"
-  }, {
-    "name": "Floating Islands",
-    "type": "biome",
-    "abv": "Fi"
-  }, {
-    "name": "Grassy Areas/Plains",
-    "type": "biome",
-    "abv": "Ga"
-  }, {
-    "name": "Lava",
-    "type": "biome",
-    "abv": "La"
-  }, {
-    "name": "Liquid",
-    "type": "biome",
-    "abv": "Li"
-  }, {
-    "name": "Mountains",
-    "type": "biome",
-    "abv": "Mo"
-  }, {
-    "name": "Pillars",
-    "type": "biome",
-    "abv": "Pi"
-  }, {
-    "name": "Rocky",
-    "type": "biome",
-    "abv": "Ro"
-  }, {
-    "name": "Snow/Ice",
-    "type": "biome",
-    "abv": "Si"
-  }, {
-    "name": "Weird Stuff",
-    "type": "biome",
-    "abv": "We"
-  }]
+        "name": "Featureless",
+        "type": "biome",
+        "abv": "Fe"
+      }, {
+        "name": "Desert",
+        "type": "biome",
+        "abv": "De"
+      }, {
+        "name": "Floating Islands",
+        "type": "biome",
+        "abv": "Fi"
+      }, {
+        "name": "Grassy Areas/Plains",
+        "type": "biome",
+        "abv": "Ga"
+      }, {
+        "name": "Lava",
+        "type": "biome",
+        "abv": "La"
+      }, {
+        "name": "Liquid",
+        "type": "biome",
+        "abv": "Li"
+      }, {
+        "name": "Mountains",
+        "type": "biome",
+        "abv": "Mo"
+      }, {
+        "name": "Pillars",
+        "type": "biome",
+        "abv": "Pi"
+      }, {
+        "name": "Rocky",
+        "type": "biome",
+        "abv": "Ro"
+      }, {
+        "name": "Snow/Ice",
+        "type": "biome",
+        "abv": "Si"
+      }, {
+        "name": "Weird Stuff",
+        "type": "biome",
+        "abv": "We"
+      }]
     },
     "resource": {
       "tit": "Resources",
       "type": "resource",
+      "select": "c",
+      "pos": 1,
       "p": {
         "keys": "",
         "name": "None",
@@ -71,6 +75,8 @@ angular.module('namer', [])
     "lifeform": {
       "tit": "Lifeforms",
       "type": "lifeform",
+      "select": "c",
+      "pos": 2,
       "p": {
         "key": "",
         "name": "None",
@@ -80,6 +86,8 @@ angular.module('namer', [])
     "law": {
       "tit": "Law",
       "type": "law",
+      "select": "r",
+      "pos": 3,
       "p": {
         "name": "Lawless",
         "abv": "l"
@@ -88,6 +96,8 @@ angular.module('namer', [])
     "structure": {
       "tit": "Structures",
       "type": "structure",
+      "select": "c",
+      "pos": 4,
       "p": {
         "keys": "",
         "name": "None",
@@ -97,18 +107,64 @@ angular.module('namer', [])
     "climate": {
       "tit": "Climate",
       "type": "climate",
+      "select": "r",
+      "pos": 5,
       "p": {
         "name": "Safe",
         "abv": "sa"
-      }
+      },
+      "list": [{
+        "name": "Safe",
+        "type": "climate",
+        "abv": "sa"
+      }, {
+        "name": "Cold",
+        "type": "climate",
+        "abv": "co"
+      }, {
+        "name": "Heat",
+        "type": "climate",
+        "abv": "me"
+      }, {
+        "name": "Radiation",
+        "type": "climate",
+        "abv": "ra"
+      }, {
+        "name": "Toxic",
+        "type": "climate",
+        "abv": "to"
+      }]
     },
     "direction": {
       "tit": "Direction",
       "type": "direction",
+      "select": "r",
+      "pos": 6,
       "p": {
         "name": "Going Toward Center",
         "abv": "GTC"
-      }
+      },
+      "list": [{
+        "name": "Going Toward Center",
+        "type": "direction",
+        "abv": "GTC"
+      }, {
+        "name": "Going Toward Edge",
+        "type": "direction",
+        "abv": "GTE"
+      }, {
+        "name": "Moving Laterally",
+        "type": "direction",
+        "abv": "MOL"
+      }, {
+        "name": "Staying In Solar System",
+        "type": "direction",
+        "abv": "SIS"
+      }, {
+        "name": "Warping",
+        "type": "direction",
+        "abv": "WAR"
+      }]
     }
   };
 
@@ -306,19 +362,19 @@ angular.module('namer', [])
     "abv": "sa"
   }, {
     "name": "Cold",
-      "type": "climate",
+    "type": "climate",
     "abv": "co"
   }, {
     "name": "Heat",
-      "type": "climate",
+    "type": "climate",
     "abv": "me"
   }, {
     "name": "Radiation",
-      "type": "climate",
+    "type": "climate",
     "abv": "ra"
   }, {
     "name": "Toxic",
-      "type": "climate",
+    "type": "climate",
     "abv": "to"
   }];
 
@@ -348,23 +404,21 @@ angular.module('namer', [])
     console.log(missile.name + " heads towards " + target);
     for (var resource in $scope.name) {
       console.log($scope.name[resource].type + " vs " + target)
-      if($scope.name[resource].type === target)
-        {
-          $scope.name[resource].p = missile;
-          console.log("missile reached");
-        }
+      if ($scope.name[resource].type === target) {
+        $scope.name[resource].p = missile;
+        console.log("missile reached");
       }
+    }
   };
 
   $scope.lister = function(type) {
-  console.log(type);
-  var dList = document.getElementById(type).classList;
-  if(dList.contains("hidden")) {
-    dList.remove("hidden");
-  }
-  else {
-    dList.add("hidden");
-  }
+    console.log(type);
+    var dList = document.getElementById(type).classList;
+    if (dList.contains("hidden")) {
+      dList.remove("hidden");
+    } else {
+      dList.add("hidden");
+    }
   };
 
   $scope.lawChange = function() {
