@@ -16,14 +16,15 @@
 <body>
 	<div ng-controller="nameController" id="page-wrapper" class="container">
 
-		<div class="">
-		<name-box></name-box>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			<name-box></name-box>
+			</div>
+			
+			<div class="panel-body">
+			<my-choices></my-choices>
+			</div>
 		</div>
-		
-		<div class="">
-		<my-choices></my-choices>
-		</div>
-
 		<div class="">
 			
 			<div pick-choice id="biome" class="radio" type="biome"></div>
