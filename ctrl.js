@@ -13,6 +13,7 @@ angular.module('namer', [])
       pos: "0",
       p: {
         name: "Featureless",
+        type: "biome",
         abv: "Fe"
       },
       list: [{
@@ -69,26 +70,32 @@ angular.module('namer', [])
       p: {
         keys: "",
         name: "None",
+        type: "resource",
         abv: "zil"
       },
       list: [{
         name: "Ship",
+        type: "resource",
         key: "a",
         boo: false
       }, {
         name: "Suit",
+        type: "resource",
         key: "b",
         boo: false
       }, {
         name: "Multi-tool",
+        type: "resource",
         key: "c",
         boo: false
       }, {
         name: "Blueprint",
+        type: "resource",
         key: "d",
         boo: false
       }, {
         name: "Trading",
+        type: "resource",
         key: "e",
         boo: false
       }]
@@ -101,20 +108,24 @@ angular.module('namer', [])
       p: {
         key: "",
         name: "None",
+        type: "lifeform",
         abv: "u"
       },
       list: [{
         name: "Plants",
+        type: "lifeform",
         key: "a",
         boo: false,
         abv: "e"
       }, {
         name: "Creatures",
+        type: "lifeform",
         key: "b",
         boo: false,
         abv: "i"
       }, {
         name: "NPCs",
+        type: "lifeform",
         key: "c",
         boo: false,
         abv: "o"
@@ -127,13 +138,16 @@ angular.module('namer', [])
       pos: "3",
       p: {
         name: "Lawless",
+        type: "law",
         abv: "l"
       },
       list: [{
         name: "Sentinels",
+        type: "law",
         abv: "s"
       }, {
         name: "Lawless",
+        type: "law",
         abv: "l"
       }]
     },
@@ -145,18 +159,22 @@ angular.module('namer', [])
       p: {
         keys: "",
         name: "None",
+        type: "structure",
         abv: "no"
       },
       list: [{
         name: "Buildings",
+        type: "structure",
         key: "a",
         boo: false
       }, {
         name: "Monoliths",
+        type: "structure",
         key: "b",
         boo: false
       }, {
         name: "Portals",
+        type: "structure",
         key: "c",
         boo: false
       }]
@@ -168,6 +186,7 @@ angular.module('namer', [])
       pos: "5",
       p: {
         name: "Safe",
+        type: "climate",
         abv: "sa"
       },
       list: [{
@@ -199,6 +218,7 @@ angular.module('namer', [])
       pos: "6",
       p: {
         name: "Going Toward Center",
+        type: "direction",
         abv: "GTC"
       },
       list: [{
