@@ -514,7 +514,7 @@ angular.module('namer', [])
   $scope.lister = function(type) {
     console.log(type);
     var dList = document.getElementById(type).classList;
-    for(var values in dList){
+    for(var value in dList){
       value.toggle("hidden");
     }
   };
