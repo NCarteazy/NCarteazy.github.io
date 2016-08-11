@@ -461,12 +461,11 @@ angular.module('namer', [])
     console.log(missile.name + " heads towards " + target);
 
     for (var resource in $scope.name) {
-      console.log($scope.name[resource].type + " vs " + target)
-
       if ($scope.name[resource].type === target) {
         if (t === "r") {
           $scope.name[resource].p = missile;
           console.log("missile reached");
+          break;
         } else {
           $scope.name[resource].p.keys = "";
           $scope.name[resource].p.name = "";
@@ -489,8 +488,8 @@ angular.module('namer', [])
   };
 
   $scope.$watch('name.structure.p.keys', function(oldValue, newValue) {
-    console.log("sup")
-  })
+    console.log("sup");
+  });
 
   $scope.lister = function(type) {
     console.log(type);
