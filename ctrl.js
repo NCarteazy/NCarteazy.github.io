@@ -515,7 +515,7 @@ angular.module('namer', [])
     console.log(type);
     var dList = document.getElementById(type).classList;
     for(var value in dList){
-      value.toggle("hidden");
+      dList[value].toggle("hidden");
     }
   };
 
