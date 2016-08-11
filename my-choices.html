@@ -1,6 +1,6 @@
     <div ng-repeat="category in name">
       
-      <h3 ng-style="category.persistentType" ng-click="lister(category.type);"><strong>{{category.tit}}</strong>: {{category.p.name}}</h3>
+      <h3 ng-class="{'bgColored': category.persistentType}" ng-click="lister(category.type);"><strong>{{category.tit}}</strong>: {{category.p.name}}</h3>
       
       <div class="{{category.type}} hidden btn-group" role="group" ng-repeat="choices in category.list">
         <button class="btn btn-default" ng-click="changer(category.type, choices, category.select)"> 

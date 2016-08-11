@@ -1,15 +1,16 @@
-<h1><span ng-style="name.biome.persistentType" ng-mouseover="highlightType(name.biome, tStyleOne)" ng-mouseleave="name.biome.persistentType=tStyletwo">{{name.biome.p.abv}}</span>
+<h1>
+<span ng-class="{'bgColored': name.biome.persistentType}" ng-mouseover="highlightType(name.biome, true)" ng-mouseleave="highlighttype(name.biome, false)">{{name.biome.p.abv}}</span>
 
-<span class="name.resource.persistentType" ng-mouseover="name.resource.persistentType=tStyleone" ng-mouseleave="name.resource.persistentType=tStyletwo">{{name.resource.p.abv}}</span>
+<span ng-class="{'bgColored': name.resource.persistentType}" ng-mouseover="highlighttype(name.resource, true)" ng-mouseleave="highlighttype(name.resource, false)">{{name.resource.p.abv}}</span>
 
-<span class="name.lifeform.persistentType" ng-mouseover="name.lifeform.persistentType=tStyleone" ng-mouseleave="name.lifeform.persistentType=tStyletwo">{{name.lifeform.p.abv}}</span>
+<span ng-class="{'bgColored': name.lifeform.persistentType}" ng-mouseover="highlighttype(name.lifeform, true)" ng-mouseleave="highlighttype(name.lifeform, false)">{{name.lifeform.p.abv}}</span>
 
-<span class="name.law.persistentType" ng-mouseover="name.law.persistentType=tStyleone" ng-mouseleave="name.law.persistentType=tStyletwo">{{name.law.p.abv}}</span>
+<span ng-class="{'bgColored': name.law.persistentType}" ng-mouseover="highlighttype(name.law, true)" ng-mouseleave="highlighttype(name.law, false)">{{name.law.p.abv}}</span>
 
-<span class="name.structure.persistentType" ng-mouseover="name.structure.persistentType=tStyleone" ng-mouseleave="name.structure.persistentType=tStyletwo">{{name.structure.p.abv}}</span>
+<span ng-class="{'bgColored': name.structure.persistentType}" ng-mouseover="highlighttype(name.structure, true)" ng-mouseleave="highlighttype(name.structure, false)">{{name.structure.p.abv}}</span>
 
-<span class="name.climate.persistentType" ng-mouseover="name.climate.persistentType=tStyleone" ng-mouseleave="name.climate.persistentType=tStyletwo">{{name.climate.p.abv}}</span>
+<span ng-class="{'bgColored': name.climate.persistentType}" ng-mouseover="highlighttype(name.climate., true)" ng-mouseleave="highlighttype(name.climate, false)">{{name.climate.p.abv}}</span>
 
-<span class="name.direction.persistentType" ng-mouseover="name.direction.persistentType=tStyleone" ng-mouseleave="name.direction.persistentType=tStyletwo">{{name.direction.p.abv}}</span>
+<span ng-class="{'bgColored': name.direction.persistentType}" ng-mouseover="highlighttype(name.direction, true)" ng-mouseleave="highlighttype(name.direction, false)">{{name.direction.p.abv}}</span>
 
 <span> - {{date | date:'MMddyy'}}</span></h1>
