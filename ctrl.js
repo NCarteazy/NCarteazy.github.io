@@ -514,12 +514,11 @@ angular.module('namer', [])
   $scope.lister = function(type) {
     console.log(type);
     var idlist = document.getElementsByClassName(type);
-    for(var ele in idlist) {
-      if(idlist[ele]) {
-        if(idlist[ele].classList.contains("hidden")){
+    for (var ele in idlist) {
+      if (idlist[ele].classList) {
+        if (idlist[ele].classList.contains("hidden")) {
           idlist[ele].classList.remove("hidden");
-        }
-        else{
+        } else {
           idlist[ele].classList.add("hidden");
         }
       }
