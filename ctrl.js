@@ -9,7 +9,7 @@ angular.module('namer', [])
   $scope.styleTwo = {'background-color': 'initial'};
 
   $scope.name = {
-    "biome": {
+    "p0": {
       tit: "Biome",
       persistentType: false,
       type: "biome",
@@ -66,7 +66,7 @@ angular.module('namer', [])
         abv: "We"
       }]
     },
-    "resource": {
+    "p1": {
       tit: "Resources",
       persistentType: false,
       type: "resource",
@@ -105,7 +105,7 @@ angular.module('namer', [])
         boo: false
       }]
     },
-    "lifeform": {
+    "p2": {
       tit: "Lifeforms",
       persistentType: false,
       type: "lifeform",
@@ -137,7 +137,7 @@ angular.module('namer', [])
         abv: "o"
       }]
     },
-    "law": {
+    "p3": {
       tit: "Law",
       persistentType: false,
       type: "law",
@@ -158,7 +158,7 @@ angular.module('namer', [])
         abv: "l"
       }]
     },
-    "structure": {
+    "p4": {
       tit: "Structures",
       persistentType: false,
       type: "structure",
@@ -187,7 +187,7 @@ angular.module('namer', [])
         boo: false
       }]
     },
-    "climate": {
+    "p5": {
       tit: "Climate",
       persistentType: false,
       type: "climate",
@@ -220,7 +220,7 @@ angular.module('namer', [])
         abv: "to"
       }]
     },
-    "direction": {
+    "p6": {
       tit: "Direction",
       persistentType: false,
       type: "direction",
@@ -382,50 +382,50 @@ angular.module('namer', [])
     }
   };
 
-  $scope.$watch('name.structure.p.keys', function(newValue, oldValue) {
+  $scope.$watch('name.p4.p.keys', function(newValue, oldValue) {
     for (var structureCombination in $scope.structureCombinations) {
-      $scope.name.structure.p.abv = "";
-      if ($scope.structureCombinations[structureCombination].keys === $scope.name.structure.p.keys) {
-        $scope.name.structure.p.abv = $scope.structureCombinations[structureCombination].abv;
+      $scope.name.p4.p.abv = "";
+      if ($scope.structureCombinations[structureCombination].keys === $scope.name.p4.p.keys) {
+        $scope.name.p4.p.abv = $scope.structureCombinations[structureCombination].abv;
         break;
       }
     }
   });
 
-  $scope.$watch('name.resource.p.keys', function(newValue, oldValue) {
+  $scope.$watch('name.p1.p.keys', function(newValue, oldValue) {
     for (var resourceCombination in $scope.resourceCombinations) {
-      $scope.name.resource.p.abv = "";
-      if ($scope.name.resource.p.keys === 0) {
-        $scope.name.resource.p.name = "None";
-        $scope.name.resource.p.abv = 'zil';
+      $scope.name.p1.p.abv = "";
+      if ($scope.name.p1.p.keys === 0) {
+        $scope.name.p1.p.name = "None";
+        $scope.name.p1.p.abv = 'zil';
         break;
-      } else if ($scope.resourceCombinations[resourceCombination].keys === $scope.name.resource.p.keys) {
-        $scope.name.resource.p.abv = $scope.resourceCombinations[resourceCombination].abv;
+      } else if ($scope.resourceCombinations[resourceCombination].keys === $scope.name.p1.p.keys) {
+        $scope.name.p1.p.abv = $scope.resourceCombinations[resourceCombination].abv;
         break;
-      } else if ($scope.name.resource.p.keys && $scope.name.resource.p.keys.length >= 3) {
-        if ($scope.name.resource.p.keys.indexOf('d') == -1) {
-          $scope.name.resource.p.abv = 'nth';
+      } else if ($scope.name.p1.p.keys && $scope.name.p1.p.keys.length >= 3) {
+        if ($scope.name.p1.p.keys.indexOf('d') == -1) {
+          $scope.name.p1.p.abv = 'nth';
           break;
         } else {
-          $scope.name.resource.p.abv = 'bth';
+          $scope.name.p1.p.abv = 'bth';
           break;
         }
       }
     }
   });
 
-  $scope.$watch('name.lifeform.p.keys', function(newValue, oldValue) {
+  $scope.$watch('name.p2.p.keys', function(newValue, oldValue) {
     for (var lf2 in $scope.lifeforms) {
-      $scope.name.lifeform.p.abv = "";
-      if ($scope.name.lifeform.p.keys === "") {
-        $scope.name.lifeform.p.name = "None";
-        $scope.name.lifeform.p.abv = 'u';
+      $scope.name.p2.p.abv = "";
+      if ($scope.name.p2.p.keys === "") {
+        $scope.name.p2.p.name = "None";
+        $scope.name.p2.p.abv = 'u';
         break;
-      } else if ($scope.lifeforms[lf2].keys === $scope.name.lifeform.p.keys) {
-        $scope.name.lifeform.p.abv = $scope.lifeforms[lf2].abv;
+      } else if ($scope.lifeforms[lf2].keys === $scope.name.p2.p.keys) {
+        $scope.name.p2.p.abv = $scope.lifeforms[lf2].abv;
         break;
-      } else if ($scope.name.lifeform.p.keys && $scope.name.lifeform.p.keys.length >= 2) {
-        $scope.name.lifeform.p.abv = 'a';
+      } else if ($scope.name.p2.p.keys && $scope.name.p2.p.keys.length >= 2) {
+        $scope.name.p2.p.abv = 'a';
         break;
       }
     }
@@ -446,14 +446,6 @@ angular.module('namer', [])
 
   $scope.highlightType = function(resource, showColor) {
       resource.persistentType = showColor;
-  };
-
-  $scope.lawChange = function() {
-    if ($scope.name.law.p.abv === "l") {
-      $scope.name.law.p = $scope.sent;
-    } else {
-      $scope.name.law.p = $scope.lawless;
-    }
   };
 }])
 
