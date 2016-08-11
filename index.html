@@ -49,7 +49,7 @@
 		</div> -->
 
 
-<div ng-repeat="category in name">
+<div ng-repeat="category in name | orderBy:'-pos'">
 
 	<h3><strong>{{category.tit}}</strong>: {{category.p.name}}</h3>
 	<button class="btn btn-default" ng-click="lister(category.type);">
