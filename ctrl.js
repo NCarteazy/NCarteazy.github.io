@@ -7,454 +7,454 @@ angular.module('namer', [])
 
   $scope.name = {
     "biome": {
-      "tit": "Biome",
-      "type": "biome",
-      "select": "r",
-      "pos": "0",
-      "p": {
+      tit: "Biome",
+      type: "biome",
+      select: "r",
+      pos: "0",
+      p: {
         name: "Featureless",
-        "abv": "Fe"
+        abv: "Fe"
       },
-      "list": [{
+      list: [{
         name: "Featureless",
-        "type": "biome",
-        "abv": "Fe"
+        type: "biome",
+        abv: "Fe"
       }, {
         name: "Desert",
-        "type": "biome",
-        "abv": "De"
+        type: "biome",
+        abv: "De"
       }, {
         name: "Floating Islands",
-        "type": "biome",
-        "abv": "Fi"
+        type: "biome",
+        abv: "Fi"
       }, {
         name: "Grassy Areas/Plains",
-        "type": "biome",
-        "abv": "Ga"
+        type: "biome",
+        abv: "Ga"
       }, {
         name: "Lava",
-        "type": "biome",
-        "abv": "La"
+        type: "biome",
+        abv: "La"
       }, {
         name: "Liquid",
-        "type": "biome",
-        "abv": "Li"
+        type: "biome",
+        abv: "Li"
       }, {
         name: "Mountains",
-        "type": "biome",
-        "abv": "Mo"
+        type: "biome",
+        abv: "Mo"
       }, {
         name: "Pillars",
-        "type": "biome",
-        "abv": "Pi"
+        type: "biome",
+        abv: "Pi"
       }, {
         name: "Rocky",
-        "type": "biome",
-        "abv": "Ro"
+        type: "biome",
+        abv: "Ro"
       }, {
         name: "Snow/Ice",
-        "type": "biome",
-        "abv": "Si"
+        type: "biome",
+        abv: "Si"
       }, {
         name: "Weird Stuff",
-        "type": "biome",
-        "abv": "We"
+        type: "biome",
+        abv: "We"
       }]
     },
     "resource": {
-      "tit": "Resources",
-      "type": "resource",
-      "select": "c",
-      "pos": "1",
-      "p": {
-        "keys": "",
+      tit: "Resources",
+      type: "resource",
+      select: "c",
+      pos: "1",
+      p: {
+        keys: "",
         name: "None",
-        "abv": "zil"
+        abv: "zil"
       },
-      "list": [{
+      list: [{
         name: "Ship",
-        "key": "a",
-        "boo": false
+        key: "a",
+        boo: false
       }, {
         name: "Suit",
-        "key": "b",
-        "boo": false
+        key: "b",
+        boo: false
       }, {
         name: "Multi-tool",
-        "key": "c",
-        "boo": false
+        key: "c",
+        boo: false
       }, {
         name: "Blueprint",
-        "key": "d",
-        "boo": false
+        key: "d",
+        boo: false
       }, {
         name: "Trading",
-        "key": "e",
-        "boo": false
+        key: "e",
+        boo: false
       }]
     },
     "lifeform": {
-      "tit": "Lifeforms",
-      "type": "lifeform",
-      "select": "c",
-      "pos": "2",
-      "p": {
-        "key": "",
+      tit: "Lifeforms",
+      type: "lifeform",
+      select: "c",
+      pos: "2",
+      p: {
+        key: "",
         name: "None",
-        "abv": "u"
+        abv: "u"
       },
-      "list": [{
+      list: [{
         name: "Plants",
-        "key": "a",
-        "boo": false,
-        "abv": "e"
+        key: "a",
+        boo: false,
+        abv: "e"
       }, {
         name: "Creatures",
-        "key": "b",
-        "boo": false,
-        "abv": "i"
+        key: "b",
+        boo: false,
+        abv: "i"
       }, {
         name: "NPCs",
-        "key": "c",
-        "boo": false,
-        "abv": "o"
+        key: "c",
+        boo: false,
+        abv: "o"
       }]
     },
     "law": {
-      "tit": "Law",
-      "type": "law",
-      "select": "r",
-      "pos": "3",
-      "p": {
+      tit: "Law",
+      type: "law",
+      select: "r",
+      pos: "3",
+      p: {
         name: "Lawless",
-        "abv": "l"
+        abv: "l"
       },
-      "list": [{
+      list: [{
         name: "Sentinels",
-        "abv": "s"
+        abv: "s"
       }, {
         name: "Lawless",
-        "abv": "l"
+        abv: "l"
       }]
     },
     "structure": {
-      "tit": "Structures",
-      "type": "structure",
-      "select": "c",
-      "pos": "4",
-      "p": {
-        "keys": "",
+      tit: "Structures",
+      type: "structure",
+      select: "c",
+      pos: "4",
+      p: {
+        keys: "",
         name: "None",
-        "abv": "no"
+        abv: "no"
       },
-      "list": [{
+      list: [{
         name: "Buildings",
-        "key": "a",
-        "boo": false
+        key: "a",
+        boo: false
       }, {
         name: "Monoliths",
-        "key": "b",
-        "boo": false
+        key: "b",
+        boo: false
       }, {
         name: "Portals",
-        "key": "c",
-        "boo": false
+        key: "c",
+        boo: false
       }]
     },
     "climate": {
-      "tit": "Climate",
-      "type": "climate",
-      "select": "r",
-      "pos": "5",
-      "p": {
+      tit: "Climate",
+      type: "climate",
+      select: "r",
+      pos: "5",
+      p: {
         name: "Safe",
-        "abv": "sa"
+        abv: "sa"
       },
-      "list": [{
+      list: [{
         name: "Safe",
-        "type": "climate",
-        "abv": "sa"
+        type: "climate",
+        abv: "sa"
       }, {
         name: "Cold",
-        "type": "climate",
-        "abv": "co"
+        type: "climate",
+        abv: "co"
       }, {
         name: "Heat",
-        "type": "climate",
-        "abv": "me"
+        type: "climate",
+        abv: "me"
       }, {
         name: "Radiation",
-        "type": "climate",
-        "abv": "ra"
+        type: "climate",
+        abv: "ra"
       }, {
         name: "Toxic",
-        "type": "climate",
-        "abv": "to"
+        type: "climate",
+        abv: "to"
       }]
     },
     "direction": {
-      "tit": "Direction",
-      "type": "direction",
-      "select": "r",
-      "pos": "6",
-      "p": {
+      tit: "Direction",
+      type: "direction",
+      select: "r",
+      pos: "6",
+      p: {
         name: "Going Toward Center",
-        "abv": "GTC"
+        abv: "GTC"
       },
-      "list": [{
+      list: [{
         name: "Going Toward Center",
-        "type": "direction",
-        "abv": "GTC"
+        type: "direction",
+        abv: "GTC"
       }, {
         name: "Going Toward Edge",
-        "type": "direction",
-        "abv": "GTE"
+        type: "direction",
+        abv: "GTE"
       }, {
         name: "Moving Laterally",
-        "type": "direction",
-        "abv": "MOL"
+        type: "direction",
+        abv: "MOL"
       }, {
         name: "Staying In Solar System",
-        "type": "direction",
-        "abv": "SIS"
+        type: "direction",
+        abv: "SIS"
       }, {
         name: "Warping",
-        "type": "direction",
-        "abv": "WAR"
+        type: "direction",
+        abv: "WAR"
       }]
     }
   };
 
   $scope.biomes = [{
     name: "Featureless",
-    "type": "biome",
-    "abv": "Fe"
+    type: "biome",
+    abv: "Fe"
   }, {
     name: "Desert",
-    "type": "biome",
-    "abv": "De"
+    type: "biome",
+    abv: "De"
   }, {
     name: "Floating Islands",
-    "type": "biome",
-    "abv": "Fi"
+    type: "biome",
+    abv: "Fi"
   }, {
     name: "Grassy Areas/Plains",
-    "type": "biome",
-    "abv": "Ga"
+    type: "biome",
+    abv: "Ga"
   }, {
     name: "Lava",
-    "type": "biome",
-    "abv": "La"
+    type: "biome",
+    abv: "La"
   }, {
     name: "Liquid",
-    "type": "biome",
-    "abv": "Li"
+    type: "biome",
+    abv: "Li"
   }, {
     name: "Mountains",
-    "type": "biome",
-    "abv": "Mo"
+    type: "biome",
+    abv: "Mo"
   }, {
     name: "Pillars",
-    "type": "biome",
-    "abv": "Pi"
+    type: "biome",
+    abv: "Pi"
   }, {
     name: "Rocky",
-    "type": "biome",
-    "abv": "Ro"
+    type: "biome",
+    abv: "Ro"
   }, {
     name: "Snow/Ice",
-    "type": "biome",
-    "abv": "Si"
+    type: "biome",
+    abv: "Si"
   }, {
     name: "Weird Stuff",
-    "type": "biome",
-    "abv": "We"
+    type: "biome",
+    abv: "We"
   }];
 
   $scope.resources = [{
     name: "Ship",
-    "key": "a",
-    "boo": false
+    key: "a",
+    boo: false
   }, {
     name: "Suit",
-    "key": "b",
-    "boo": false
+    key: "b",
+    boo: false
   }, {
     name: "Multi-tool",
-    "key": "c",
-    "boo": false
+    key: "c",
+    boo: false
   }, {
     name: "Blueprint",
-    "key": "d",
-    "boo": false
+    key: "d",
+    boo: false
   }, {
     name: "Trading",
-    "key": "e",
-    "boo": false
+    key: "e",
+    boo: false
   }];
 
   $scope.resourceCombinations = [{
-    "keys": 'a',
-    "abv": 'shp',
+    keys: 'a',
+    abv: 'shp',
   }, {
-    "keys": 'b',
-    "abv": 'sut',
+    keys: 'b',
+    abv: 'sut',
   }, {
-    "keys": 'c',
-    "abv": 'mul',
+    keys: 'c',
+    abv: 'mul',
   }, {
-    "keys": 'd',
-    "abv": 'bup',
+    keys: 'd',
+    abv: 'bup',
   }, {
-    "keys": 'e',
-    "abv": 'tar',
+    keys: 'e',
+    abv: 'tar',
   }, {
-    "keys": 'ab',
-    "abv": 'shs',
+    keys: 'ab',
+    abv: 'shs',
   }, {
-    "keys": 'ac',
-    "abv": 'shm',
+    keys: 'ac',
+    abv: 'shm',
   }, {
-    "keys": 'ad',
-    "abv": 'sht',
+    keys: 'ad',
+    abv: 'sht',
   }, {
-    "keys": 'ae',
-    "abv": 'shb',
+    keys: 'ae',
+    abv: 'shb',
   }, {
-    "keys": 'bc',
-    "abv": 'sum',
+    keys: 'bc',
+    abv: 'sum',
   }, {
-    "keys": 'bd',
-    "abv": 'str',
+    keys: 'bd',
+    abv: 'str',
   }, {
-    "keys": 'be',
-    "abv": 'sub',
+    keys: 'be',
+    abv: 'sub',
   }, {
-    "keys": 'cd',
-    "abv": 'mbl',
+    keys: 'cd',
+    abv: 'mbl',
   }, {
-    "keys": 'ce',
-    "abv": 'mtr',
+    keys: 'ce',
+    abv: 'mtr',
   }, {
-    "keys": 'de',
-    "abv": 'btr',
+    keys: 'de',
+    abv: 'btr',
   }, {
-    "keys": 'abce',
-    "abv": 'nth',
+    keys: 'abce',
+    abv: 'nth',
   }, {
-    "keys": 'abcde',
-    "abv": 'bth',
+    keys: 'abcde',
+    abv: 'bth',
   }];
 
   $scope.lifeforms = [{
     name: "Plants",
-    "key": "a",
-    "boo": false,
-    "abv": "e"
+    key: "a",
+    boo: false,
+    abv: "e"
   }, {
     name: "Creatures",
-    "key": "b",
-    "boo": false,
-    "abv": "i"
+    key: "b",
+    boo: false,
+    abv: "i"
   }, {
     name: "NPCs",
-    "key": "c",
-    "boo": false,
-    "abv": "o"
+    key: "c",
+    boo: false,
+    abv: "o"
   }];
 
   $scope.sent = {
     name: "Sentinels",
-    "abv": "s"
+    abv: "s"
   };
 
   $scope.lawless = {
     name: "Lawless",
-    "abv": "l"
+    abv: "l"
   };
 
   $scope.structures = [{
     name: "Buildings",
-    "key": "a",
-    "boo": false
+    key: "a",
+    boo: false
   }, {
     name: "Monoliths",
-    "key": "b",
-    "boo": false
+    key: "b",
+    boo: false
   }, {
     name: "Portals",
-    "key": "c",
-    "boo": false
+    key: "c",
+    boo: false
   }];
 
   $scope.structureCombinations = [{
-    "keys": 'a',
-    "abv": 'bu',
+    keys: 'a',
+    abv: 'bu',
   }, {
-    "keys": 'b',
-    "abv": 'mo',
+    keys: 'b',
+    abv: 'mo',
   }, {
-    "keys": 'c',
-    "abv": 'po',
+    keys: 'c',
+    abv: 'po',
   }, {
-    "keys": 'ab',
-    "abv": 'ma',
+    keys: 'ab',
+    abv: 'ma',
   }, {
-    "keys": 'ac',
-    "abv": 'mu',
+    keys: 'ac',
+    abv: 'mu',
   }, {
-    "keys": 'bc',
-    "abv": 'po',
+    keys: 'bc',
+    abv: 'po',
   }, {
-    "keys": 'abc',
-    "abv": 'sa',
+    keys: 'abc',
+    abv: 'sa',
   }, {
-    "keys": '',
-    "abv": 'no',
+    keys: '',
+    abv: 'no',
   }];
 
   $scope.climates = [{
     name: "Safe",
-    "type": "climate",
-    "abv": "sa"
+    type: "climate",
+    abv: "sa"
   }, {
     name: "Cold",
-    "type": "climate",
-    "abv": "co"
+    type: "climate",
+    abv: "co"
   }, {
     name: "Heat",
-    "type": "climate",
-    "abv": "me"
+    type: "climate",
+    abv: "me"
   }, {
     name: "Radiation",
-    "type": "climate",
-    "abv": "ra"
+    type: "climate",
+    abv: "ra"
   }, {
     name: "Toxic",
-    "type": "climate",
-    "abv": "to"
+    type: "climate",
+    abv: "to"
   }];
 
   $scope.directions = [{
     name: "Going Toward Center",
-    "type": "direction",
-    "abv": "GTC"
+    type: "direction",
+    abv: "GTC"
   }, {
     name: "Going Toward Edge",
-    "type": "direction",
-    "abv": "GTE"
+    type: "direction",
+    abv: "GTE"
   }, {
     name: "Moving Laterally",
-    "type": "direction",
-    "abv": "MOL"
+    type: "direction",
+    abv: "MOL"
   }, {
     name: "Staying In Solar System",
-    "type": "direction",
-    "abv": "SIS"
+    type: "direction",
+    abv: "SIS"
   }, {
     name: "Warping",
-    "type": "direction",
-    "abv": "WAR"
+    type: "direction",
+    abv: "WAR"
   }];
 
   $scope.changer = function(target, missile, t) {
