@@ -1,1 +1,15 @@
-<h1>{{name.biome.p.abv}}{{name.resource.p.abv}}{{name.lifeform.p.abv}}{{name.law.p.abv}}{{name.structure.p.abv}}{{name.climate.p.abv}}{{name.direction.p.abv}} - {{date | date:'MMddyy'}}</h1>
+<h1><span ng-style="name.biome.persistentType" ng-mouseover="highlightType(name.biome, tStyleOne)" ng-mouseleave="name.biome.persistentType=tStyletwo">{{name.biome.p.abv}}</span>
+
+<span class="name.resource.persistentType" ng-mouseover="name.resource.persistentType=tStyleone" ng-mouseleave="name.resource.persistentType=tStyletwo">{{name.resource.p.abv}}</span>
+
+<span class="name.lifeform.persistentType" ng-mouseover="name.lifeform.persistentType=tStyleone" ng-mouseleave="name.lifeform.persistentType=tStyletwo">{{name.lifeform.p.abv}}</span>
+
+<span class="name.law.persistentType" ng-mouseover="name.law.persistentType=tStyleone" ng-mouseleave="name.law.persistentType=tStyletwo">{{name.law.p.abv}}</span>
+
+<span class="name.structure.persistentType" ng-mouseover="name.structure.persistentType=tStyleone" ng-mouseleave="name.structure.persistentType=tStyletwo">{{name.structure.p.abv}}</span>
+
+<span class="name.climate.persistentType" ng-mouseover="name.climate.persistentType=tStyleone" ng-mouseleave="name.climate.persistentType=tStyletwo">{{name.climate.p.abv}}</span>
+
+<span class="name.direction.persistentType" ng-mouseover="name.direction.persistentType=tStyleone" ng-mouseleave="name.direction.persistentType=tStyletwo">{{name.direction.p.abv}}</span>
+
+<span> - {{date | date:'MMddyy'}}</span></h1>

@@ -4,10 +4,14 @@ angular.module('namer', [])
 .controller('nameController', ['$scope', function($scope) {
 
   $scope.date = new Date();
-
+          
+  $scope.tStyleOne = {'background-color':'#53c68c','border-radius':'3px'};
+  $scope.tStyleTwo = {'background-color':'initial'};
+                               
   $scope.name = {
     "biome": {
       tit: "Biome",
+      persistentType: $scope.tStyleTwo,
       type: "biome",
       select: "r",
       pos: "0",
@@ -64,6 +68,7 @@ angular.module('namer', [])
     },
     "resource": {
       tit: "Resources",
+      persistentType: $scope.tStyleTwo,
       type: "resource",
       select: "c",
       pos: "1",
@@ -102,6 +107,7 @@ angular.module('namer', [])
     },
     "lifeform": {
       tit: "Lifeforms",
+      persistentType: $scope.tStyleTwo,
       type: "lifeform",
       select: "c",
       pos: "2",
@@ -133,6 +139,7 @@ angular.module('namer', [])
     },
     "law": {
       tit: "Law",
+      persistentType: $scope.tStyleTwo,
       type: "law",
       select: "r",
       pos: "3",
@@ -153,6 +160,7 @@ angular.module('namer', [])
     },
     "structure": {
       tit: "Structures",
+      persistentType: $scope.tStyleTwo,
       type: "structure",
       select: "c",
       pos: "4",
@@ -181,6 +189,7 @@ angular.module('namer', [])
     },
     "climate": {
       tit: "Climate",
+      persistentType: $scope.tStyleTwo,
       type: "climate",
       select: "r",
       pos: "5",
@@ -213,6 +222,7 @@ angular.module('namer', [])
     },
     "direction": {
       tit: "Direction",
+      persistentType: $scope.tStyleTwo,
       type: "direction",
       select: "r",
       pos: "6",
@@ -356,6 +366,7 @@ angular.module('namer', [])
             if ($scope.name[resource].list[choice].name === missile.name) {
               $scope.name[resource].list[choice].boo = !$scope.name[resource].list[choice].boo;
             }
+            console.log($scope.name[resource].list[choice].name + missile.name)
             if ($scope.name[resource].list[choice].boo) {
               if (!$scope.name[resource].p.keys) {
                 $scope.name[resource].p.keys = $scope.name[resource].list[choice].key;
@@ -431,6 +442,10 @@ angular.module('namer', [])
         }
       }
     }
+  };
+
+  $scope.highlightType = function(resource, targetStyle) {
+    resource.persistentType = targetStyle;
   };
 
   $scope.lawChange = function() {
