@@ -1,3 +1,11 @@
- <div ng-repeat="nam in name">
- 	<h3><strong>{{nam.tit}}</strong>: {{nam.p.name}}</h3><button class="btn btn-default" ng-click="lister(nam.type);">Change</button>
- </div>
+    <div ng-repeat="category in name">
+      
+      <h3 ng-click="lister(category.type);"><strong>{{category.tit}}</strong>: {{category.p.name}}</h3>
+      
+      <div class="{{category.type}} hidden btn-group" role="group" ng-repeat="choices in category.list">
+        <button class="btn btn-default" ng-click="changer(category.type, choices, category.select)"> 
+			    {{choices.name || "None"}}
+		    </button>
+        
+      </div>
+    </div>
