@@ -70,7 +70,28 @@ angular.module('namer', [])
         "keys": "",
         "name": "None",
         "abv": "zil"
-      }
+      },
+      "list": [{
+        "name": "Ship",
+        "key": "a",
+        "boo": false
+      }, {
+        "name": "Suit",
+        "key": "b",
+        "boo": false
+      }, {
+        "name": "Multi-tool",
+        "key": "c",
+        "boo": false
+      }, {
+        "name": "Blueprint",
+        "key": "d",
+        "boo": false
+      }, {
+        "name": "Trading",
+        "key": "e",
+        "boo": false
+      }]
     },
     "lifeform": {
       "tit": "Lifeforms",
@@ -81,7 +102,23 @@ angular.module('namer', [])
         "key": "",
         "name": "None",
         "abv": "u"
-      }
+      },
+      "list": [{
+        "name": "Plants",
+        "key": "a",
+        "boo": false,
+        "abv": "e"
+      }, {
+        "name": "Creatures",
+        "key": "b",
+        "boo": false,
+        "abv": "i"
+      }, {
+        "name": "NPCs",
+        "key": "c",
+        "boo": false,
+        "abv": "o"
+      }]
     },
     "law": {
       "tit": "Law",
@@ -91,7 +128,14 @@ angular.module('namer', [])
       "p": {
         "name": "Lawless",
         "abv": "l"
-      }
+      },
+      "list": [{
+        "name": "Sentinels",
+        "abv": "s"
+      }, {
+        "name": "Lawless",
+        "abv": "l"
+      }]
     },
     "structure": {
       "tit": "Structures",
@@ -102,7 +146,20 @@ angular.module('namer', [])
         "keys": "",
         "name": "None",
         "abv": "no"
-      }
+      },
+      "list": [{
+        "name": "Buildings",
+        "key": "a",
+        "boo": false
+      }, {
+        "name": "Monoliths",
+        "key": "b",
+        "boo": false
+      }, {
+        "name": "Portals",
+        "key": "c",
+        "boo": false
+      }]
     },
     "climate": {
       "tit": "Climate",
@@ -402,11 +459,29 @@ angular.module('namer', [])
 
   $scope.changer = function(target, missile, t) {
     console.log(missile.name + " heads towards " + target);
+
     for (var resource in $scope.name) {
       console.log($scope.name[resource].type + " vs " + target)
+
       if ($scope.name[resource].type === target) {
-        $scope.name[resource].p = missile;
-        console.log("missile reached");
+        if (t === "r") {
+          $scope.name[resource].p = missile;
+          console.log("missile reached");
+        } else {
+          $scope.name.resource.p.keys = "";
+          $scope.name.resource.p.name = "";
+          for (var resource in $scope.resources) {
+            if ($scope.resources[resource].boo) {
+              if (!$scope.name.resource.p.keys) {
+                $scope.name.resource.p.keys = $scope.resources[resource].key;
+                $scope.name.resource.p.name = $scope.resources[resource].name;
+              } else {
+                $scope.name.resource.p.keys = $scope.name.resource.p.keys + $scope.resources[resource].key;
+                $scope.name.resource.p.name = $scope.name.resource.p.name + "/" + $scope.resources[resource].name;
+              }
+            }
+          }
+        }
       }
     }
   };
