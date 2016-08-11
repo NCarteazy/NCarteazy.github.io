@@ -468,23 +468,29 @@ angular.module('namer', [])
           $scope.name[resource].p = missile;
           console.log("missile reached");
         } else {
-          $scope.name.resource.p.keys = "";
-          $scope.name.resource.p.name = "";
+          $scope.name[resource].p.keys = "";
+          $scope.name[resource].p.name = "";
           for (var choice in $scope.name[resource].list) {
-            if ($scope.resources[resource].boo) {
-              if (!$scope.name.resource.p.keys) {
-                $scope.name.resource.p.keys = $scope.resources[resource].key;
-                $scope.name.resource.p.name = $scope.resources[resource].name;
+            $scope.name[resource].list[choice].boo = !$scope.name[resource].list[choice].boo;
+            if ($scope.name[resource].list[choice].boo) {
+              if (!$scope.name[resource].p.keys) {
+                $scope.name[resource].p.keys = $scope.name[resource].list[choice].key;
+                $scope.name[resource].p.name = $scope.name[resource].list[choice].name;
               } else {
-                $scope.name.resource.p.keys = $scope.name.resource.p.keys + $scope.resources[resource].key;
-                $scope.name.resource.p.name = $scope.name.resource.p.name + "/" + $scope.resources[resource].name;
+                $scope.name[resource].p.keys = $scope.name[resource].p.keys + $scope.name[resource].list[choice].key;
+                $scope.name[resource].p.name = $scope.name[resource].p.name + "/" + $scope.name[resource].list[choice].name;
               }
             }
           }
+          $scope.$digest();
         }
       }
     }
   };
+
+  $scope.$watch('name.structure.p.keys', function(oldValue, newValue) {
+    console.log("sup")
+  })
 
   $scope.lister = function(type) {
     console.log(type);
@@ -505,19 +511,6 @@ angular.module('namer', [])
   };
 
   $scope.resourceChange = function() {
-    $scope.name.resource.p.keys = "";
-    $scope.name.resource.p.name = "";
-    for (var resource in $scope.resources) {
-      if ($scope.resources[resource].boo) {
-        if (!$scope.name.resource.p.keys) {
-          $scope.name.resource.p.keys = $scope.resources[resource].key;
-          $scope.name.resource.p.name = $scope.resources[resource].name;
-        } else {
-          $scope.name.resource.p.keys = $scope.name.resource.p.keys + $scope.resources[resource].key;
-          $scope.name.resource.p.name = $scope.name.resource.p.name + "/" + $scope.resources[resource].name;
-        }
-      }
-    }
     for (var resourceCombination in $scope.resourceCombinations) {
       $scope.name.resource.p.abv = "";
       if ($scope.resourceCombinations[resourceCombination].keys === $scope.name.resource.p.keys) {
