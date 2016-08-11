@@ -10,53 +10,53 @@ angular.module('namer', [])
       "tit": "Biome",
       "type": "biome",
       "select": "r",
-      "pos": 0,
+      "pos": "0",
       "p": {
-        "name": "Featureless",
+        name: "Featureless",
         "abv": "Fe"
       },
       "list": [{
-        "name": "Featureless",
+        name: "Featureless",
         "type": "biome",
         "abv": "Fe"
       }, {
-        "name": "Desert",
+        name: "Desert",
         "type": "biome",
         "abv": "De"
       }, {
-        "name": "Floating Islands",
+        name: "Floating Islands",
         "type": "biome",
         "abv": "Fi"
       }, {
-        "name": "Grassy Areas/Plains",
+        name: "Grassy Areas/Plains",
         "type": "biome",
         "abv": "Ga"
       }, {
-        "name": "Lava",
+        name: "Lava",
         "type": "biome",
         "abv": "La"
       }, {
-        "name": "Liquid",
+        name: "Liquid",
         "type": "biome",
         "abv": "Li"
       }, {
-        "name": "Mountains",
+        name: "Mountains",
         "type": "biome",
         "abv": "Mo"
       }, {
-        "name": "Pillars",
+        name: "Pillars",
         "type": "biome",
         "abv": "Pi"
       }, {
-        "name": "Rocky",
+        name: "Rocky",
         "type": "biome",
         "abv": "Ro"
       }, {
-        "name": "Snow/Ice",
+        name: "Snow/Ice",
         "type": "biome",
         "abv": "Si"
       }, {
-        "name": "Weird Stuff",
+        name: "Weird Stuff",
         "type": "biome",
         "abv": "We"
       }]
@@ -68,27 +68,27 @@ angular.module('namer', [])
       "pos": "1",
       "p": {
         "keys": "",
-        "name": "None",
+        name: "None",
         "abv": "zil"
       },
       "list": [{
-        "name": "Ship",
+        name: "Ship",
         "key": "a",
         "boo": false
       }, {
-        "name": "Suit",
+        name: "Suit",
         "key": "b",
         "boo": false
       }, {
-        "name": "Multi-tool",
+        name: "Multi-tool",
         "key": "c",
         "boo": false
       }, {
-        "name": "Blueprint",
+        name: "Blueprint",
         "key": "d",
         "boo": false
       }, {
-        "name": "Trading",
+        name: "Trading",
         "key": "e",
         "boo": false
       }]
@@ -100,21 +100,21 @@ angular.module('namer', [])
       "pos": "2",
       "p": {
         "key": "",
-        "name": "None",
+        name: "None",
         "abv": "u"
       },
       "list": [{
-        "name": "Plants",
+        name: "Plants",
         "key": "a",
         "boo": false,
         "abv": "e"
       }, {
-        "name": "Creatures",
+        name: "Creatures",
         "key": "b",
         "boo": false,
         "abv": "i"
       }, {
-        "name": "NPCs",
+        name: "NPCs",
         "key": "c",
         "boo": false,
         "abv": "o"
@@ -126,14 +126,14 @@ angular.module('namer', [])
       "select": "r",
       "pos": "3",
       "p": {
-        "name": "Lawless",
+        name: "Lawless",
         "abv": "l"
       },
       "list": [{
-        "name": "Sentinels",
+        name: "Sentinels",
         "abv": "s"
       }, {
-        "name": "Lawless",
+        name: "Lawless",
         "abv": "l"
       }]
     },
@@ -144,19 +144,19 @@ angular.module('namer', [])
       "pos": "4",
       "p": {
         "keys": "",
-        "name": "None",
+        name: "None",
         "abv": "no"
       },
       "list": [{
-        "name": "Buildings",
+        name: "Buildings",
         "key": "a",
         "boo": false
       }, {
-        "name": "Monoliths",
+        name: "Monoliths",
         "key": "b",
         "boo": false
       }, {
-        "name": "Portals",
+        name: "Portals",
         "key": "c",
         "boo": false
       }]
@@ -167,27 +167,27 @@ angular.module('namer', [])
       "select": "r",
       "pos": "5",
       "p": {
-        "name": "Safe",
+        name: "Safe",
         "abv": "sa"
       },
       "list": [{
-        "name": "Safe",
+        name: "Safe",
         "type": "climate",
         "abv": "sa"
       }, {
-        "name": "Cold",
+        name: "Cold",
         "type": "climate",
         "abv": "co"
       }, {
-        "name": "Heat",
+        name: "Heat",
         "type": "climate",
         "abv": "me"
       }, {
-        "name": "Radiation",
+        name: "Radiation",
         "type": "climate",
         "abv": "ra"
       }, {
-        "name": "Toxic",
+        name: "Toxic",
         "type": "climate",
         "abv": "to"
       }]
@@ -198,27 +198,27 @@ angular.module('namer', [])
       "select": "r",
       "pos": "6",
       "p": {
-        "name": "Going Toward Center",
+        name: "Going Toward Center",
         "abv": "GTC"
       },
       "list": [{
-        "name": "Going Toward Center",
+        name: "Going Toward Center",
         "type": "direction",
         "abv": "GTC"
       }, {
-        "name": "Going Toward Edge",
+        name: "Going Toward Edge",
         "type": "direction",
         "abv": "GTE"
       }, {
-        "name": "Moving Laterally",
+        name: "Moving Laterally",
         "type": "direction",
         "abv": "MOL"
       }, {
-        "name": "Staying In Solar System",
+        name: "Staying In Solar System",
         "type": "direction",
         "abv": "SIS"
       }, {
-        "name": "Warping",
+        name: "Warping",
         "type": "direction",
         "abv": "WAR"
       }]
@@ -226,69 +226,69 @@ angular.module('namer', [])
   };
 
   $scope.biomes = [{
-    "name": "Featureless",
+    name: "Featureless",
     "type": "biome",
     "abv": "Fe"
   }, {
-    "name": "Desert",
+    name: "Desert",
     "type": "biome",
     "abv": "De"
   }, {
-    "name": "Floating Islands",
+    name: "Floating Islands",
     "type": "biome",
     "abv": "Fi"
   }, {
-    "name": "Grassy Areas/Plains",
+    name: "Grassy Areas/Plains",
     "type": "biome",
     "abv": "Ga"
   }, {
-    "name": "Lava",
+    name: "Lava",
     "type": "biome",
     "abv": "La"
   }, {
-    "name": "Liquid",
+    name: "Liquid",
     "type": "biome",
     "abv": "Li"
   }, {
-    "name": "Mountains",
+    name: "Mountains",
     "type": "biome",
     "abv": "Mo"
   }, {
-    "name": "Pillars",
+    name: "Pillars",
     "type": "biome",
     "abv": "Pi"
   }, {
-    "name": "Rocky",
+    name: "Rocky",
     "type": "biome",
     "abv": "Ro"
   }, {
-    "name": "Snow/Ice",
+    name: "Snow/Ice",
     "type": "biome",
     "abv": "Si"
   }, {
-    "name": "Weird Stuff",
+    name: "Weird Stuff",
     "type": "biome",
     "abv": "We"
   }];
 
   $scope.resources = [{
-    "name": "Ship",
+    name: "Ship",
     "key": "a",
     "boo": false
   }, {
-    "name": "Suit",
+    name: "Suit",
     "key": "b",
     "boo": false
   }, {
-    "name": "Multi-tool",
+    name: "Multi-tool",
     "key": "c",
     "boo": false
   }, {
-    "name": "Blueprint",
+    name: "Blueprint",
     "key": "d",
     "boo": false
   }, {
-    "name": "Trading",
+    name: "Trading",
     "key": "e",
     "boo": false
   }];
@@ -347,42 +347,42 @@ angular.module('namer', [])
   }];
 
   $scope.lifeforms = [{
-    "name": "Plants",
+    name: "Plants",
     "key": "a",
     "boo": false,
     "abv": "e"
   }, {
-    "name": "Creatures",
+    name: "Creatures",
     "key": "b",
     "boo": false,
     "abv": "i"
   }, {
-    "name": "NPCs",
+    name: "NPCs",
     "key": "c",
     "boo": false,
     "abv": "o"
   }];
 
   $scope.sent = {
-    "name": "Sentinels",
+    name: "Sentinels",
     "abv": "s"
   };
 
   $scope.lawless = {
-    "name": "Lawless",
+    name: "Lawless",
     "abv": "l"
   };
 
   $scope.structures = [{
-    "name": "Buildings",
+    name: "Buildings",
     "key": "a",
     "boo": false
   }, {
-    "name": "Monoliths",
+    name: "Monoliths",
     "key": "b",
     "boo": false
   }, {
-    "name": "Portals",
+    name: "Portals",
     "key": "c",
     "boo": false
   }];
@@ -414,45 +414,45 @@ angular.module('namer', [])
   }];
 
   $scope.climates = [{
-    "name": "Safe",
+    name: "Safe",
     "type": "climate",
     "abv": "sa"
   }, {
-    "name": "Cold",
+    name: "Cold",
     "type": "climate",
     "abv": "co"
   }, {
-    "name": "Heat",
+    name: "Heat",
     "type": "climate",
     "abv": "me"
   }, {
-    "name": "Radiation",
+    name: "Radiation",
     "type": "climate",
     "abv": "ra"
   }, {
-    "name": "Toxic",
+    name: "Toxic",
     "type": "climate",
     "abv": "to"
   }];
 
   $scope.directions = [{
-    "name": "Going Toward Center",
+    name: "Going Toward Center",
     "type": "direction",
     "abv": "GTC"
   }, {
-    "name": "Going Toward Edge",
+    name: "Going Toward Edge",
     "type": "direction",
     "abv": "GTE"
   }, {
-    "name": "Moving Laterally",
+    name: "Moving Laterally",
     "type": "direction",
     "abv": "MOL"
   }, {
-    "name": "Staying In Solar System",
+    name: "Staying In Solar System",
     "type": "direction",
     "abv": "SIS"
   }, {
-    "name": "Warping",
+    name: "Warping",
     "type": "direction",
     "abv": "WAR"
   }];
@@ -470,7 +470,7 @@ angular.module('namer', [])
         } else {
           $scope.name.resource.p.keys = "";
           $scope.name.resource.p.name = "";
-          for (var resource in $scope.resources) {
+          for (var choice in $scope.name[resource].list) {
             if ($scope.resources[resource].boo) {
               if (!$scope.name.resource.p.keys) {
                 $scope.name.resource.p.keys = $scope.resources[resource].key;
