@@ -6,6 +6,7 @@ angular.module('namer', [])
   $scope.date = new Date();
                      
   $scope.styleOne = {'background-color': '#53c68c'};
+  $scope.styleTwo = {'background-color': 'initial'};
 
   $scope.name = {
     "biome": {
