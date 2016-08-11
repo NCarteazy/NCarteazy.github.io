@@ -515,12 +515,13 @@ angular.module('namer', [])
     console.log(type);
     var idlist = document.getElementsByClassName(type);
     for(var ele in idlist) {
-      console.log(idlist[ele].innerHTML);
-      if(idlist[ele].classList.contains("hidden")){
-        idlist[ele].classList.remove("hidden");
-      }
-      else{
-        idlist[ele].classList.add("hidden");
+      if(idlist[ele]) {
+        if(idlist[ele].classList.contains("hidden")){
+          idlist[ele].classList.remove("hidden");
+        }
+        else{
+          idlist[ele].classList.add("hidden");
+        }
       }
     }
   };
