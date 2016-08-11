@@ -515,11 +515,11 @@ angular.module('namer', [])
     console.log(type);
     var dList = document.getElementById(type).classList;
     for(var value in dList){
-      if(dList[value].contains("hidden")){
-        dList[value].remove("hidden");
+      if(value.contains("hidden")){
+        value.remove("hidden");
       }
       else {
-      dList[value].add("hidden");
+        value.add("hidden");
       }
     }
   };
