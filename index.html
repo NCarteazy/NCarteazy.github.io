@@ -56,7 +56,7 @@
 		Change
 	</button>
 
-	<div id="{{category.type}}" ng-repeat="choices in category.list">
+	<div class="{{category.type}}" ng-repeat="choices in category.list">
 
 		<button ng-click="changer(category.type, choices, category.select)"> 
 			{{choices.name}}
