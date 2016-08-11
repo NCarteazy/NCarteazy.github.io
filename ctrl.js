@@ -356,7 +356,6 @@ angular.module('namer', [])
             if ($scope.name[resource].list[choice].name === missile.name) {
               $scope.name[resource].list[choice].boo = !$scope.name[resource].list[choice].boo;
             }
-            console.log($scope.name[resource].list[choice].name + missile.name)
             if ($scope.name[resource].list[choice].boo) {
               if (!$scope.name[resource].p.keys) {
                 $scope.name[resource].p.keys = $scope.name[resource].list[choice].key;
