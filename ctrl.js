@@ -4,7 +4,9 @@ angular.module('namer', [])
 .controller('nameController', ['$scope', function($scope) {
 
   $scope.date = new Date();
-                                      
+                     
+  $scope.styleOne = {'background-color': '#53c68c'};
+
   $scope.name = {
     "biome": {
       tit: "Biome",
