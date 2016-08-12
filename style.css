@@ -1,11 +1,5 @@
 h1 {display:inline;}
 
-.container {
-	border-radius:3px; 
-	border-style:solid;
-	color: #111111;
-}
-
 .highlightable {
  transition-duration: 0.4s;
 }
@@ -29,6 +23,9 @@ h1 {display:inline;}
 }
 
 .content {
+  width:30% !important;
+  margin: auto;
+  color: #111111;
   font-family:Trebuchet MS;
   transition-duration: 0.4s;
   padding:20px;
@@ -36,32 +33,28 @@ h1 {display:inline;}
   border-radius: 10px;
   background-color:rgba(80, 170, 210, 0.9);
   position: fixed;
-
   left: 0;
   right: 0;
   z-index: 9999;
   top: 10%;
 }
 
-button{
-  transition-duration: 0.4s !important;
-  	background-color:#5780c7 !important;
-	display:inline-block !important;
-	color:#ffffff !important;
-	padding:10px 20px!important;
-	text-decoration:none !important;
-	text-shadow:0 1px 0 #283966 !important;
+.container{
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100% !important;
 }
 
-button:hover {
-	background-color:#476e9e !important;
-}
-button:active {
-	position:relative !important;
-  background-color:#3a5c85;
-	top:1px !important;
+button{
+  transition-duration: 0.4s !important;
+	display:inline-block !important;
+	color:#111111 !important;
+  border-radius:0px !important;
+  margin:1px;
 }
 
 .choiceheader {
   cursor:pointer;
+  border-bottom: solid;
+  border-width:1px;
 }
