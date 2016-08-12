@@ -18,12 +18,12 @@
 </head>
 <body>
   <div class="background-image"></div>
-  <div ng-controller="nameController" id="page-wrapper" class="content">
-    <div class="container">
+  <div ng-controller="nameController" id="page-wrapper" ng-class="content">
+    <div ng-class="container">
 		<name-box></name-box>
     </div>
 
-    <div class="container">
+    <div ng-class="container">
     	<my-choices></my-choices>
     </div>
   </div>
