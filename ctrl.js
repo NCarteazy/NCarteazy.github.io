@@ -447,7 +447,7 @@ angular.module('namer', [])
   $scope.moder = function() {
     BootstrapDialog.show({
             title: 'No Man\'s Sky Planet Namer',
-            message: 'To use, click on one of the categories and then select whatever fits your planet. In some cases, multiple can be selected. The planet names are based off of <a href="https://i.redd.it/pfanhavkwvcx.jpg">this encoder</a>. Written by <a href="https://github.com/NCarteazy/NCarteazy.github.io">Nicholas Carter</a>. Enjoy! Let me know any feedback by messaging me on Reddit: <a href="https://www.reddit.com/user/carteazy">/u/Carteazy</a>',
+            message: 'To use, click on one of the categories and then select whatever fits your planet. In some cases, multiple can be selected. <br>The planet names are based off of <a href="https://i.redd.it/pfanhavkwvcx.jpg">this encoder</a>. <br><br>Written by <a href="https://github.com/NCarteazy/NCarteazy.github.io">Nicholas Carter</a>. Enjoy! Let me know any feedback by messaging me on Reddit: <a href="https://www.reddit.com/user/carteazy">/u/Carteazy</a>',
             cssClass: 'posmodal',
             closable: true
         });
