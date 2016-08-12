@@ -28,6 +28,7 @@ body{
 
 .content {
   width:30% !important;
+  height: 80% !important;
   margin: auto;
   color: #111111;
   font-family:Trebuchet MS;
