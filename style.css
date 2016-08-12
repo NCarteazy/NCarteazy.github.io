@@ -1,6 +1,6 @@
 h1 {
 	display:inline;
-	font-size:  3.5vw;	
+	font-size:  3vw;	
 }
 h3{
 	font-size: 1.5vw;
@@ -60,6 +60,7 @@ button{
 	color:#111111 !important;
   border-radius:0px !important;
   margin:1px;
+  font-size: 1vw;
 }
 
 .choiceheader {
