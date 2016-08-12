@@ -28,7 +28,6 @@ body{
 
 .content {
   width:30% !important;
-  height: 80% !important;
   margin: auto;
   color: #111111;
   font-family:Trebuchet MS;
@@ -37,7 +36,7 @@ body{
   background: #339966;
   border-radius: 10px;
   background-color:rgba(80, 170, 210, 0.9);
-  position: relative;
+  position: relative !important;
   left: 0;
   right: 0;
   z-index: 2;
@@ -49,7 +48,6 @@ body{
   margin-bottom: 10px;
   width: 100% !important;
   position: absolute !important;
-  background-color:rgba(80, 170, 210, 0.9);
 }
 
 button{
