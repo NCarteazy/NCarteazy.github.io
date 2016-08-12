@@ -58,3 +58,10 @@ button{
   border-bottom: solid;
   border-width:1px;
 }
+
+.info {
+  padding: 3px !important;
+  border-radius: 5px !important;
+  border-style: solid !important;
+  border-color: black !important;
+}
