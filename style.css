@@ -72,3 +72,9 @@ button{
 .posmodal {
   z-index:3;
 }
+
+.imag {
+	margin: auto;
+	max-width:70%;
+	max-height:70%;
+}
