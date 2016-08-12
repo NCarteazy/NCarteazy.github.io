@@ -10,6 +10,8 @@
   <script src="ctrl.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.5/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.5/js/bootstrap-dialog.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,31 +20,6 @@
     <div class="container">
 		<name-box></name-box>
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title" id="myModalLabel">How to use</h4>
-          </div>
-          <div class="modal-body">
-            <p>This is a simple web-app to help you choose your No Man's Sky planet name according to this picture: </p>
-            <br>
-            <img src="https://i.redd.it/pfanhavkwvcx.jpg" style="width:70%;height:70%;">
-            <br>
-            <p>Click on a resource name to expand the list, choose a value, then see the name change. Written by <a href="https://github.com/NCarteazy/NCarteazy.github.io">Nicholas Carter</a>.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
     <div class="container">
     	<my-choices></my-choices>

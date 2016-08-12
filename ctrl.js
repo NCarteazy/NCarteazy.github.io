@@ -5,7 +5,7 @@ angular.module('namer', [])
 
   $scope.date = new Date();
                      
-  $scope.styleOne = {'background-color': '#53c68c', 'border-radius': '3px'};
+  $scope.styleOne = {'color':'white', 'background-color': '#761A2D', 'border-radius': '3px'};
   $scope.styleTwo = {'background-color': 'initial'};
 
   $scope.name = {
@@ -443,6 +443,13 @@ angular.module('namer', [])
       }
     }
   };
+
+
+  $scope.moder = function() {
+    BootstrapDialog.show({
+            message: 'Hi Apple!'
+        });
+  }
 
   $scope.highlightType = function(resource, showColor) {
       resource.persistentType = showColor;
