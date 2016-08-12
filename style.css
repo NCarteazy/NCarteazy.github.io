@@ -1,4 +1,7 @@
 h1 {display:inline;}
+body{
+
+}
 
 .highlightable {
  transition-duration: 0.4s;
@@ -35,7 +38,7 @@ h1 {display:inline;}
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2;
   top: 10%;
 }
 
@@ -64,4 +67,8 @@ button{
   border-radius: 5px !important;
   border-style: solid !important;
   border-color: black !important;
+}
+
+.posmodal {
+  z-index:3;
 }

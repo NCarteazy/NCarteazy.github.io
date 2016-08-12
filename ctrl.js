@@ -366,7 +366,6 @@ angular.module('namer', [])
             if ($scope.name[resource].list[choice].name === missile.name) {
               $scope.name[resource].list[choice].boo = !$scope.name[resource].list[choice].boo;
             }
-            console.log($scope.name[resource].list[choice].name + missile.name)
             if ($scope.name[resource].list[choice].boo) {
               if (!$scope.name[resource].p.keys) {
                 $scope.name[resource].p.keys = $scope.name[resource].list[choice].key;
@@ -447,7 +446,10 @@ angular.module('namer', [])
 
   $scope.moder = function() {
     BootstrapDialog.show({
-            message: 'Hi Apple!'
+            title: 'No Man\'s Sky Planet Namer',
+            message: 'To use, click on one of the categories and then select whatever fits your planet. In some cases, multiple can be selected. ',
+            cssClass: 'posmodal',
+            closable: true
         });
   }
 
