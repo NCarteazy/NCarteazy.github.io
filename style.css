@@ -49,6 +49,7 @@ body{
   margin-bottom: 10px;
   width: 100% !important;
   position: absolute !important;
+  background-color:rgba(80, 170, 210, 0.9);
 }
 
 button{
