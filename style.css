@@ -36,7 +36,7 @@ body{
   background: #339966;
   border-radius: 10px;
   background-color:rgba(80, 170, 210, 0.9);
-  position: relative !important;
+  position: fixed;
   left: 0;
   right: 0;
   z-index: 2;
@@ -47,7 +47,7 @@ body{
   margin: auto;
   margin-bottom: 10px;
   width: 100% !important;
-  position: absolute !important;
+  position: relative !important;
 }
 
 button{
